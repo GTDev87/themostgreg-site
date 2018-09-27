@@ -1,5 +1,5 @@
 # deploy project
-## Create docker instance
+## Create cluster
 
 ```
 # create kubernetes cluster
@@ -84,5 +84,6 @@ helm delete cert-manager
 # run dev locally
 ```
 cd frontend
+yarn install
 gatsby develop
 ```

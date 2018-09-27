@@ -16,5 +16,14 @@ WORKDIR /site
 VOLUME /site
 
 COPY ./entry.sh /
+COPY ./src /site/src
+COPY ./static /site/static
+COPY ./.babelrc /site/
+COPY ./gatsby-config.js /site/
+COPY ./gatsby-node.js /site/
+COPY ./package.json /site/
+RUN ls -la /site/*
+
+
 RUN chmod +x /entry.sh
 ENTRYPOINT ["/entry.sh", "build"]
