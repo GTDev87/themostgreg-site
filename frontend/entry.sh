@@ -26,14 +26,14 @@ then
   echo "gatsby develop"
   cd $GATSBY_DIR
   rm -rf $GATSBY_DIR/public
-  gatsby develop --host 0.0.0.0
+  yarn develop --host 0.0.0.0
 
 elif  [ "$1" == "build" ]
 then
   echo "gatsby build"
   rm -rf $GATSBY_DIR/public
   cd $GATSBY_DIR
-  gatsby build
+  yarn build
   rm -rf /webapp/*
   mv $GATSBY_DIR/public/* /webapp/
 
@@ -42,7 +42,7 @@ then
   echo "gatsby stage"
   rm -rf $GATSBY_DIR/public
   cd $GATSBY_DIR
-  gatsby build
+  yarn build
   gatsby serve --port 8000
 
 else

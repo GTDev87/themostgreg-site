@@ -15,6 +15,9 @@ import Seo from '@react-website-themes/default/components/Seo';
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
 
+import TestComponent from '../../lib/es6_global/src/re/TestComponent.bs.js';
+
+
 const IndexPage = props => {
   const {
     data: {
@@ -40,6 +43,7 @@ const IndexPage = props => {
         <Menu items={menuItems} />
       </Header>
       <Hero html={heroHTML} />
+      <TestComponent></TestComponent>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
       <Seo
         url={siteUrl}

@@ -66,3 +66,5 @@ yarn-error.log
 secret.yml
 
 .vscode
+.merlin
+lib/
