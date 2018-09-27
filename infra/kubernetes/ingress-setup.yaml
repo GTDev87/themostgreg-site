@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "true"
+    kubernetes.io/ingress.class: "public"
+    kubernetes.io/tls-acme: "true"
+    nginx.org/ssl-services: "nginx"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+  namespace: default
+spec:
+  tls:
+  - secretName: tmg-secret
+    hosts:
+      - www.themostgreg.com
+      - themostgreg.com
+  rules:
+  - host: www.themostgreg.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: nginx
+          servicePort: 8000
+  - host: themostgreg.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: nginx
+          servicePort: 8000
