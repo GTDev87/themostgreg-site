@@ -66,6 +66,7 @@ helm install --name cert-manager \
 # create cluster issuer
 kubectl create -n ingress -f clusterissuers.yaml
 
+make clean
 kompose up
 
 ```
