@@ -20,9 +20,7 @@ module Config = [%graphql
 
 let make =
     (
-      ~heroHTML: Js.Option.t('string),
-      ~footerLinksHTML: Js.Option.t('string),
-      ~copyrightHTML: Js.Option.t('string),
+      ~props,
       _children,
     ) => {
   ...component,
@@ -35,23 +33,21 @@ let make =
         />
         <Menu items=Config.menu />
       </Header>
-      <Hero heroHTML />
-      <Footer links=footerLinksHTML copyright=copyrightHTML />
+      <Hero heroHTML=props##data##hero##html />
+      <Footer
+        links=props##data##footerLinks##html
+        copyright=props##data##copyright##html
+      />
       <Seo
         url=Config.config##siteUrl
         language=Config.config##siteLanguage
         title=Config.config##siteTitle
         description=Config.config##siteDescription
       />
-    </Layout>,
+    </Layout>
 };
 
 let default =
   ReasonReact.wrapReasonForJs(~component, jsProps =>
-    make(
-      ~heroHTML=Js.Nullable.toOption(jsProps##heroHTML),
-      ~footerLinksHTML=Js.Nullable.toOption(jsProps##footerLinksHTML),
-      ~copyrightHTML=Js.Nullable.toOption(jsProps##copyrightHTML),
-      [||],
-    )
+    make(~props=jsProps##props, [||])
   );

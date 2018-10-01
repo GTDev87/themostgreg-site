@@ -7,15 +7,7 @@ import '@react-website-themes/default/styles/global';
 import Index from '../../lib/es6_global/src/re/Index.bs.js';
 
 const IndexPage = props => {
-  const {
-    data: {
-      footerLinks: { html: footerLinksHTML },
-      hero: { html: heroHTML },
-      copyright: { html: copyrightHTML },
-    },
-  } = props;
-
-  return <Index footerLinksHTML={footerLinksHTML} heroHTML={heroHTML} copyrightHTML={copyrightHTML} />;
+  return <Index props={props} />;
 };
 
 export default IndexPage;
