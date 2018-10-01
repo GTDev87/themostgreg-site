@@ -66,7 +66,6 @@ const PostTemplate = props => {
     headerTitle,
     headerSubTitle,
     siteUrl,
-    siteTitle,
     siteLanguage,
     siteTitlePostfix,
   } = config;
