@@ -3,7 +3,7 @@
   "description": "A set of starters for Gatsby.js v.2",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently \"npm run develop\" \"npm run bsb-watch\"",
+    "start": "concurrently --kill-others-on-fail \"npm run build && npm run serve\" \"npm run bsb-watch\"",
     "bsb-watch": "bsb -make-world -w",
     "develop": "gatsby develop",
     "build": "bsb -make-world && gatsby build",
@@ -24,6 +24,7 @@
     "gatsby-plugin-feed": "2.0.0-rc.0",
     "gatsby-plugin-google-analytics": "2.0.5",
     "gatsby-plugin-react-helmet": "3.0.0",
+    "gatsby-plugin-reason": "^2.0.0-alpha.1",
     "gatsby-plugin-resolve-src": "2.0.0-beta.1",
     "gatsby-plugin-sharp": "2.0.5",
     "gatsby-plugin-sitemap": "2.0.1",
@@ -45,13 +46,16 @@
     "react-emotion": "^9.2.9",
     "react-facebook": "^5.0.3",
     "react-feather": "^1.1.1",
-    "reason-react": "0.4.2",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "reason-apollo": "^0.14.1",
+    "reason-react": "0.4.2"
   },
   "devDependencies": {
     "@babel/preset-flow": "^7.0.0-rc.1",
     "babel-eslint": "7.2.3",
     "babel-plugin-emotion": "^9.2.6",
+    "bs-platform": "4.0.5",
+    "concurrently": "^3.5.0",
     "dotenv": "^6.0.0",
     "eslint": "4.1.1",
     "eslint-config-react-app": "^2.1.0",
@@ -60,12 +64,11 @@
     "eslint-plugin-jest": "^21.18.0",
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-react": "7.1.0",
+    "graphql_ppx": "^0.2.7",
     "jest": "^23.6.0",
     "js-yaml": "^3.12.0",
     "prettier": "^1.13.7",
     "react-testing-library": "^5.0.1",
-    "yaml-loader": "^0.5.0",
-    "bs-platform": "4.0.5",
-    "concurrently": "^3.5.0"
+    "yaml-loader": "^0.5.0"
   }
 }

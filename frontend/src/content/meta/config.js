@@ -9,7 +9,7 @@ const config = {
   siteTitlePostfix: ` - ${base.name}`,
   siteDescription: `${
     base.name
-  } is a series starters: Minimal, Equipped, Themed, Website, Blog.`,
+    } is a series starters: Minimal, Equipped, Themed, Website, Blog.`,
   siteImage: 'preview.jpg',
   siteLanguage: 'en',
 

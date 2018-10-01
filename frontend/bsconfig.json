@@ -16,12 +16,12 @@
   "bs-dependencies": [
     "reason-react",
     // "gatsby-link-reason",
-    // "reason-apollo",
+    "reason-apollo",
     // "@glennsl/bs-json",
     // "re-debouncer"
   ],
   "ppx-flags": [
-    // "graphql_ppx/ppx"
+    "graphql_ppx/ppx"
   ],
   "sources": [
     {

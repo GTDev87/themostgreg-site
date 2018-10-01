@@ -4,19 +4,7 @@ import { graphql } from 'gatsby';
 import '@react-website-themes/default/styles/variables';
 import '@react-website-themes/default/styles/global';
 
-import Branding from '@react-website-themes/default/components/Branding';
-import Footer from '@react-website-themes/default/components/Footer';
-import Header from '@react-website-themes/default/components/Header';
-import Hero from '@react-website-themes/default/components/Hero';
-import Layout from '@react-website-themes/default/components/Layout';
-import Menu from '@react-website-themes/default/components/Menu';
-import Seo from '@react-website-themes/default/components/Seo';
-
-import config from 'content/meta/config';
-import menuItems from 'content/meta/menu';
-
-import TestComponent from '../../lib/es6_global/src/re/TestComponent.bs.js';
-
+import Index from '../../lib/es6_global/src/re/Index.bs.js';
 
 const IndexPage = props => {
   const {
@@ -27,32 +15,7 @@ const IndexPage = props => {
     },
   } = props;
 
-  const {
-    headerTitle,
-    headerSubTitle,
-    siteUrl,
-    siteTitle,
-    siteDescription,
-    siteLanguage,
-  } = config;
-
-  return (
-    <Layout>
-      <Header>
-        <Branding title={headerTitle} subTitle={headerSubTitle} />
-        <Menu items={menuItems} />
-      </Header>
-      <Hero html={heroHTML} />
-      <TestComponent></TestComponent>
-      <Footer links={footerLinksHTML} copyright={copyrightHTML} />
-      <Seo
-        url={siteUrl}
-        language={siteLanguage}
-        title={siteTitle}
-        description={siteDescription}
-      />
-    </Layout>
-  );
+  return <Index footerLinksHTML={footerLinksHTML} heroHTML={heroHTML} copyrightHTML={copyrightHTML} />;
 };
 
 export default IndexPage;

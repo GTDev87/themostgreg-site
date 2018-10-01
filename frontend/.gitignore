@@ -67,4 +67,6 @@ secret.yml
 
 .vscode
 .merlin
+.bsb.lock
 lib/
+.graphql_ppx_cache/

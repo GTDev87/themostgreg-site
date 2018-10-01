@@ -1,0 +1,27 @@
+type base = {
+  .
+  "name": string,
+  "url": string,
+};
+
+type config = {
+  .
+  "siteTitle": string,
+  "siteTitlePostfix": string,
+  "siteDescription": string,
+  "siteImage": string,
+  "siteLanguage": string,
+  "headerTitle": string,
+  "headerSubTitle": string,
+  "siteUrl": string,
+  "pathPrefix": option(string),
+};
+
+type menuItem = {
+  .
+  "label": string,
+  "to": string,
+  "icon": ReasonReact.reactElement,
+};
+
+type menu = array(menuItem);
