@@ -1,5 +1,8 @@
 let component = ReasonReact.statelessComponent("Index");
 
+[%bs.raw {|require('@react-website-themes/default/styles/variables')|}];
+[%bs.raw {|require('@react-website-themes/default/styles/global')|}];
+
 /*
 module Config = [%graphql
   {|

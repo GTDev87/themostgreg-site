@@ -1,16 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import '@react-website-themes/default/styles/variables';
-import '@react-website-themes/default/styles/global';
+import Index from '../../lib/es6_global/src/re/page/Page_Index.bs.js';
 
-import Index from '../../lib/es6_global/src/re/Index.bs.js';
-
-const IndexPage = props => {
-  return <Index props={props} />;
-};
-
-export default IndexPage;
+export default (props) => <Index props={props} />;
 
 export const query = graphql`
   query {
