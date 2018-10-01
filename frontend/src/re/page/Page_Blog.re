@@ -1,7 +1,17 @@
-let component = ReasonReact.statelessComponent("Page_Index");
+let component = ReasonReact.statelessComponent("Page_Blog");
 
-[%bs.raw {|require('@react-website-themes/default/styles/variables')|}];
-[%bs.raw {|require('@react-website-themes/default/styles/global')|}];
+type metaIcons = {
+  .
+  "calendar": ReasonReact.reactClass,
+  "user": ReasonReact.reactClass,
+  "tag": ReasonReact.reactClass,
+};
+
+let metaIcons = {
+  "calendar": CalendarIcon.comp,
+  "user": UserIcon.comp,
+  "tag": TagIcon.comp,
+};
 
 let make = (~props, _children) => {
   ...component,
@@ -14,7 +24,15 @@ let make = (~props, _children) => {
         />
         <Menu items=Config.menu />
       </Header>
-      <Hero heroHTML=props##data##hero##html />
+      <Article>
+        <Blog
+          items={
+            props##data##posts##edges |> Belt.Array.map(_, edge => edge##node)
+          }
+          author="greg"
+          metaIcons
+        />
+      </Article>
       <Footer
         links=props##data##footerLinks##html
         copyright=props##data##copyright##html
