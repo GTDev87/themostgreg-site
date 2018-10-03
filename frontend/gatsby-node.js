@@ -6,6 +6,16 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 
 const SLUG_SEPARATOR = '___';
 
+exports.onCreateBabelConfig = ({ actions: { setBabelPlugin } }) => {
+  setBabelPlugin({
+    name: 'babel-plugin-tailwind-components',
+    options: {
+      config: './tailwind.js',
+      format: 'auto'
+    }
+  })
+}
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
@@ -87,77 +97,77 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       `).then(result => {
-        if (result.errors) {
-          console.log(result.errors);
-          reject(result.errors);
-        }
-
-        const items = result.data.allMarkdownRemark.edges;
-
-        const categorySet = new Set();
-
-        // Create category list
-        items.forEach(edge => {
-          const {
-            node: {
-              frontmatter: { categories },
-            },
-          } = edge;
-
-          if (categories) {
-            categories.forEach(category => {
-              categorySet.add(category);
-            });
+          if (result.errors) {
+            console.log(result.errors);
+            reject(result.errors);
           }
-        });
 
-        // Create category pages
-        const categoryList = Array.from(categorySet);
-        categoryList.forEach(category => {
-          createPage({
-            path: `/categories/${_.kebabCase(category)}/`,
-            component: categoryTemplate,
-            context: {
-              category,
-            },
+          const items = result.data.allMarkdownRemark.edges;
+
+          const categorySet = new Set();
+
+          // Create category list
+          items.forEach(edge => {
+            const {
+              node: {
+                frontmatter: { categories },
+              },
+            } = edge;
+
+            if (categories) {
+              categories.forEach(category => {
+                categorySet.add(category);
+              });
+            }
           });
-        });
 
-        // Create posts
-        const posts = items.filter(item => item.node.fields.source === 'posts');
-        posts.forEach(({ node }, index) => {
-          const slug = node.fields.slug;
-          const next = index === 0 ? undefined : posts[index - 1].node;
-          const prev =
-            index === posts.length - 1 ? undefined : posts[index + 1].node;
-
-          createPage({
-            path: slug,
-            component: postTemplate,
-            context: {
-              slug,
-              prev,
-              next,
-            },
+          // Create category pages
+          const categoryList = Array.from(categorySet);
+          categoryList.forEach(category => {
+            createPage({
+              path: `/categories/${_.kebabCase(category)}/`,
+              component: categoryTemplate,
+              context: {
+                category,
+              },
+            });
           });
-        });
 
-        // create pages
-        const pages = items.filter(item => item.node.fields.source === 'pages');
-        pages.forEach(({ node }) => {
-          const slug = node.fields.slug;
-          const source = node.fields.source;
+          // Create posts
+          const posts = items.filter(item => item.node.fields.source === 'posts');
+          posts.forEach(({ node }, index) => {
+            const slug = node.fields.slug;
+            const next = index === 0 ? undefined : posts[index - 1].node;
+            const prev =
+              index === posts.length - 1 ? undefined : posts[index + 1].node;
 
-          createPage({
-            path: slug,
-            component: pageTemplate,
-            context: {
-              slug,
-              source,
-            },
+            createPage({
+              path: slug,
+              component: postTemplate,
+              context: {
+                slug,
+                prev,
+                next,
+              },
+            });
           });
-        });
-      })
+
+          // create pages
+          const pages = items.filter(item => item.node.fields.source === 'pages');
+          pages.forEach(({ node }) => {
+            const slug = node.fields.slug;
+            const source = node.fields.source;
+
+            createPage({
+              path: slug,
+              component: pageTemplate,
+              context: {
+                slug,
+                source,
+              },
+            });
+          });
+        })
     );
   });
 };

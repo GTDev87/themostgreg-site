@@ -4,10 +4,14 @@ let component = ReasonReact.statelessComponent("Template_Page");
 [%bs.raw {|require('@react-website-themes/default/styles/variables')|}];
 [%bs.raw {|require('@react-website-themes/default/styles/global')|}];
 
+let css = Css.css;
+let tw = Css.tw;
+let layoutClass = [%bs.raw {| css(tw`my-0 text-xl leading-tight bg-blue`) |}];
 let make = (~props, _children) => {
   ...component,
   render: _self =>
     <Layout>
+      <div className=layoutClass> {ReasonReact.string("jello")} </div>
       <Header>
         <Branding
           title=Config.config##headerTitle
