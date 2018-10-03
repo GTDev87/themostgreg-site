@@ -33,6 +33,7 @@ COPY ./gatsby-config.js /site/
 COPY ./gatsby-node.js /site/
 COPY ./package.json /site/
 COPY ./bsconfig.json /site/
+COPY ./tailwind.js /site/
 
 
 RUN chmod +x /entry.sh
