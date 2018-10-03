@@ -3,7 +3,7 @@
   "description": "A set of starters for Gatsby.js v.2",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently --kill-others-on-fail \"npm run build && npm run serve\" \"npm run bsb-watch\"",
+    "start": "concurrently --kill-others-on-fail \"gatsby develop\" \"npm run bsb-watch\"",
     "bsb-watch": "bsb -make-world -w",
     "develop": "gatsby develop",
     "build": "bsb -make-world && gatsby build",
