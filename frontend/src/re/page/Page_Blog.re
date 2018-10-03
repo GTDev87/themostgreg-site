@@ -1,19 +1,6 @@
 let component = ReasonReact.statelessComponent("Page_Blog");
 
-type metaIcons = {
-  .
-  "calendar": ReasonReact.reactClass,
-  "user": ReasonReact.reactClass,
-  "tag": ReasonReact.reactClass,
-};
-
-let metaIcons = {
-  "calendar": CalendarIcon.comp,
-  "user": UserIcon.comp,
-  "tag": TagIcon.comp,
-};
-
-let make = (~props, _children) => {
+let make = (~props: PagePropType.props, _children) => {
   ...component,
   render: _self =>
     <Layout>
@@ -30,7 +17,7 @@ let make = (~props, _children) => {
             props##data##posts##edges |> Belt.Array.map(_, edge => edge##node)
           }
           author="greg"
-          metaIcons
+          metaIcons=PagePropType.metaIcons
         />
       </Article>
       <Footer

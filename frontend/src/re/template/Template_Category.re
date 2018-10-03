@@ -4,7 +4,7 @@ let component = ReasonReact.statelessComponent("Page_Index");
 [%bs.raw {|require('@react-website-themes/default/styles/variables')|}];
 [%bs.raw {|require('@react-website-themes/default/styles/global')|}];
 
-let make = (~props, _children) => {
+let make = (~props: PagePropType.props, _children) => {
   ...component,
   render: _self =>
     <Layout>

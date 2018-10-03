@@ -6,8 +6,9 @@ let component = ReasonReact.statelessComponent("Template_Page");
 
 let css = Css.css;
 let tw = Css.tw;
+
 let layoutClass = [%bs.raw {| css(tw`my-0 text-xl leading-tight bg-blue`) |}];
-let make = (~props, _children) => {
+let make = (~props: PagePropType.props, _children) => {
   ...component,
   render: _self =>
     <Layout>

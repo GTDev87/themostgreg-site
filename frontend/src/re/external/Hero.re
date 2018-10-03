@@ -4,6 +4,6 @@ external comp: ReasonReact.reactClass = "default";
 let make = (~heroHTML, children) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=comp,
-    ~props={"html": Js.Nullable.fromOption(heroHTML)},
+    ~props={"html": heroHTML},
     children,
   );

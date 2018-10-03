@@ -4,15 +4,9 @@ let component = ReasonReact.statelessComponent("Template_Post");
 [%bs.raw {|require('@react-website-themes/default/styles/variables')|}];
 [%bs.raw {|require('@react-website-themes/default/styles/global')|}];
 
-let metaIcons = {
-  "calendar": CalendarIcon.comp,
-  "user": UserIcon.comp,
-  "tag": TagIcon.comp,
-};
-
 let nextPrevIcons = {"next": NextIcon.comp, "prev": PrevIcon.comp};
 
-let make = (~props, _children) => {
+let make = (~props: PagePropType.props, _children) => {
   ...component,
   render: _self => {
     let url = Config.config##siteUrl ++ props##data##post##fields##slug;
@@ -42,7 +36,7 @@ let make = (~props, _children) => {
           author="greg"
           prefix=props##data##post##fields##prefix
           categories=props##data##post##frontmatter##categories
-          icons=metaIcons
+          icons=PagePropType.metaIcons
         />
         <Bodytext html_=props##data##post##html />
         <Share shareBlockProps />
