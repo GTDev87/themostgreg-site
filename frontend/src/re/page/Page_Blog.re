@@ -1,4 +1,5 @@
 let component = ReasonReact.statelessComponent("Page_Blog");
+[%bs.raw {|require('../../../../../src/styles/styles.css')|}];
 
 let make = (~props: PagePropType.props, _children) => {
   ...component,

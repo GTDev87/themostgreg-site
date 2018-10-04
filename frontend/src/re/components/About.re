@@ -6,8 +6,7 @@ let tw = Css.tw;
 let aboutClass = [%bs.raw {| css(tw`
   py-16
   px-16
-  flex
-  flex-wrap
+
 `)
 |}];
 
@@ -51,18 +50,29 @@ let aboutTraitClass = [%bs.raw {| css(tw`
 `)
 |}];
 
+let aboutTraitsClass = [%bs.raw {| css(tw`
+  w-full
+  flex
+  flex-wrap
+`)
+|}];
+
 let make = _children => {
   ...component,
   render: _self =>
     <div className=aboutClass>
       <div className=aboutText> {ReasonReact.string("About")} </div>
-      {
-        traits
-        |> Belt.List.map(_, (trait: Trait.trait) =>
-             <div className=aboutTraitClass> <Trait key="copy" trait /> </div>
-           )
-        |> Utils.ReasonReact.listToReactArray
-      }
+      <div className=aboutTraitsClass>
+        {
+          traits
+          |> Belt.List.map(_, (trait: Trait.trait) =>
+               <div className=aboutTraitClass>
+                 <Trait key={trait.label} trait />
+               </div>
+             )
+          |> Utils.ReasonReact.listToReactArray
+        }
+      </div>
       <WhoAmI />
     </div>,
 };

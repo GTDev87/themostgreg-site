@@ -1,5 +1,6 @@
 let component = ReasonReact.statelessComponent("Page_404");
 
+[%bs.raw {|require('../../../../../src/styles/styles.css')|}];
 [%bs.raw {|require('@react-website-themes/default/styles/variables')|}];
 [%bs.raw {|require('@react-website-themes/default/styles/global')|}];
 

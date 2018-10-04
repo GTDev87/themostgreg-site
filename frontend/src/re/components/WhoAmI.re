@@ -21,7 +21,7 @@ let make = _children => {
   ...component,
   render: _self =>
     <div className=whoAmIClass>
-      <div className=imageSection />
-      <div className=attributeSection />
+      <div className=imageSection> <Image /> </div>
+      <div className=attributeSection> <Attributes /> </div>
     </div>,
 };

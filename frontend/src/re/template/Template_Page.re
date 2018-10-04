@@ -1,5 +1,6 @@
 let component = ReasonReact.statelessComponent("Template_Page");
 
+[%bs.raw {|require('../../../../../src/styles/styles.css')|}];
 [%bs.raw {|require('prismjs/themes/prism-okaidia.css')|}];
 [%bs.raw {|require('@react-website-themes/default/styles/variables')|}];
 [%bs.raw {|require('@react-website-themes/default/styles/global')|}];
