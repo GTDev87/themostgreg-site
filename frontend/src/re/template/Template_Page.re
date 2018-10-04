@@ -11,34 +11,30 @@ let layoutClass = [%bs.raw {| css(tw`my-0 text-xl leading-tight bg-blue`) |}];
 let make = (~props: PagePropType.props, _children) => {
   ...component,
   render: _self =>
-    <Layout>
+    <div>
       <div className=layoutClass> {ReasonReact.string("jello")} </div>
-      <Header>
-        <Branding
-          title=Config.config##headerTitle
-          subTitle=Config.config##headerSubTitle
+      <Layout>
+        <Menu />
+        <Article>
+          <Heading title=props##data##page##frontmatter##title />
+          <Bodytext html_=props##data##page##html />
+        </Article>
+        <Footer
+          links=props##data##footerLinks##html
+          copyright=props##data##copyright##html
         />
-        <Menu items=Config.menu />
-      </Header>
-      <Article>
-        <Heading title=props##data##page##frontmatter##title />
-        <Bodytext html_=props##data##page##html />
-      </Article>
-      <Footer
-        links=props##data##footerLinks##html
-        copyright=props##data##copyright##html
-      />
-      <Seo
-        url={Config.config##siteUrl ++ props##data##page##fields##slug}
-        language=Config.config##siteLanguage
-        title={
-          props##data##page##frontmatter##title
-          ++
-          Config.config##siteTitlePostfix
-        }
-        description=props##data##page##excerpt
-      />
-    </Layout>,
+        <Seo
+          url={Config.config##siteUrl ++ props##data##page##fields##slug}
+          language=Config.config##siteLanguage
+          title={
+            props##data##page##frontmatter##title
+            ++
+            Config.config##siteTitlePostfix
+          }
+          description=props##data##page##excerpt
+        />
+      </Layout>
+    </div>,
 };
 
 let default =

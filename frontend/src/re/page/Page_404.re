@@ -6,29 +6,25 @@ let component = ReasonReact.statelessComponent("Page_404");
 let make = (~props: PagePropType.props, _children) => {
   ...component,
   render: _self =>
-    <Layout>
-      <Header>
-        <Branding
-          title=Config.config##headerTitle
-          subTitle=Config.config##headerSubTitle
+    <div>
+      <Layout>
+        <Menu />
+        <Article>
+          <Heading title="NOT FOUND" />
+          <Bodytext html_=props##data##notFound##html />
+        </Article>
+        <Footer
+          links=props##data##footerLinks##html
+          copyright=props##data##copyright##html
         />
-        <Menu items=Config.menu />
-      </Header>
-      <Article>
-        <Heading title="NOT FOUND" />
-        <Bodytext html_=props##data##notFound##html />
-      </Article>
-      <Footer
-        links=props##data##footerLinks##html
-        copyright=props##data##copyright##html
-      />
-      <Seo
-        url=Config.config##siteUrl
-        language=Config.config##siteLanguage
-        title=Config.config##siteTitle
-        description=Config.config##siteDescription
-      />
-    </Layout>,
+        <Seo
+          url=Config.config##siteUrl
+          language=Config.config##siteLanguage
+          title=Config.config##siteTitle
+          description=Config.config##siteDescription
+        />
+      </Layout>
+    </div>,
 };
 
 let default =

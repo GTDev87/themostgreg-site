@@ -24,4 +24,7 @@ type menuItem = {
   "icon": ReasonReact.reactElement,
 };
 
+[@bs.get] external getTo: menuItem => string = "to";
+let to_ = x => getTo(x);
+
 type menu = array(menuItem);
