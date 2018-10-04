@@ -1,2 +1,2 @@
 clean :
-	rm -rf api/_build rm -rf ../../frontend/node_modules ../../frontend/lib/ ../../frontend/build/
+	rm -rf api/_build rm -rf ../../frontend/node_modules ../../frontend/public ../../frontend/lib/ ../../frontend/build/
