@@ -23,44 +23,42 @@ let make = (~props: PagePropType.props, _children) => {
     };
 
     <div>
-      <Layout>
-        <Menu />
-        <Article>
-          <Heading title=props##data##post##frontmatter##title />
-          <Meta
-            author="greg"
-            prefix=props##data##post##fields##prefix
-            categories=props##data##post##frontmatter##categories
-            icons=PagePropType.metaIcons
-          />
-          <Bodytext html_=props##data##post##html />
-          <Share shareBlockProps />
-          <NextPrev
-            next=props##pageContext##next
-            prev=props##pageContext##prev
-            icons=nextPrevIcons
-          />
-          <Author html_=props##data##author##html />
-          <Comments
-            slug=props##data##post##fields##slug
-            siteUrl=Config.config##siteUrl
-          />
-        </Article>
-        <Footer
-          links=props##data##footerLinks##html
-          copyright=props##data##copyright##html
+      <Menu />
+      <Article>
+        <Heading title=props##data##post##frontmatter##title />
+        <Meta
+          author="greg"
+          prefix=props##data##post##fields##prefix
+          categories=props##data##post##frontmatter##categories
+          icons=PagePropType.metaIcons
         />
-        <Seo
-          url={Config.config##siteUrl ++ props##data##post##fields##slug}
-          language=Config.config##siteLanguage
-          title={
-            props##data##post##frontmatter##title
-            ++
-            Config.config##siteTitlePostfix
-          }
-          description=props##data##post##excerpt
+        <Bodytext html_=props##data##post##html />
+        <Share shareBlockProps />
+        <NextPrev
+          next=props##pageContext##next
+          prev=props##pageContext##prev
+          icons=nextPrevIcons
         />
-      </Layout>
+        <Author html_=props##data##author##html />
+        <Comments
+          slug=props##data##post##fields##slug
+          siteUrl=Config.config##siteUrl
+        />
+      </Article>
+      <Footer
+        links=props##data##footerLinks##html
+        copyright=props##data##copyright##html
+      />
+      <Seo
+        url={Config.config##siteUrl ++ props##data##post##fields##slug}
+        language=Config.config##siteLanguage
+        title={
+          props##data##post##frontmatter##title
+          ++
+          Config.config##siteTitlePostfix
+        }
+        description=props##data##post##excerpt
+      />
     </div>;
   },
 };

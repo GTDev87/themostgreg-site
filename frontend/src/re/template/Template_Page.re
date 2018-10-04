@@ -12,28 +12,25 @@ let make = (~props: PagePropType.props, _children) => {
   ...component,
   render: _self =>
     <div>
-      <div className=layoutClass> {ReasonReact.string("jello")} </div>
-      <Layout>
-        <Menu />
-        <Article>
-          <Heading title=props##data##page##frontmatter##title />
-          <Bodytext html_=props##data##page##html />
-        </Article>
-        <Footer
-          links=props##data##footerLinks##html
-          copyright=props##data##copyright##html
-        />
-        <Seo
-          url={Config.config##siteUrl ++ props##data##page##fields##slug}
-          language=Config.config##siteLanguage
-          title={
-            props##data##page##frontmatter##title
-            ++
-            Config.config##siteTitlePostfix
-          }
-          description=props##data##page##excerpt
-        />
-      </Layout>
+      <Menu />
+      <Article>
+        <Heading title=props##data##page##frontmatter##title />
+        <Bodytext html_=props##data##page##html />
+      </Article>
+      <Footer
+        links=props##data##footerLinks##html
+        copyright=props##data##copyright##html
+      />
+      <Seo
+        url={Config.config##siteUrl ++ props##data##page##fields##slug}
+        language=Config.config##siteLanguage
+        title={
+          props##data##page##frontmatter##title
+          ++
+          Config.config##siteTitlePostfix
+        }
+        description=props##data##page##excerpt
+      />
     </div>,
 };
 

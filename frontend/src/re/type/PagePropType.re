@@ -28,10 +28,9 @@ type postType = {
 
 type dataProp = {
   .
-  "post": htmlType,
   "posts": postType,
+  "post": htmlType,
   "footerLinks": htmlType,
-  "hero": htmlType,
   "copyright": htmlType,
   "notFound": htmlType,
   "page": htmlType,

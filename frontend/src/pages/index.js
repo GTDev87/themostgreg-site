@@ -7,9 +7,6 @@ export default (props) => <Index props={props} />;
 
 export const query = graphql`
   query {
-    hero: markdownRemark(fileAbsolutePath: { regex: "/content/parts/hero/" }) {
-      html
-    }
     footerLinks: markdownRemark(
       fileAbsolutePath: { regex: "/content/parts/footerLinks/" }
     ) {

@@ -9,7 +9,7 @@ let make = (~props: PagePropType.props, _children) => {
     <div>
       <Intro />
       <Menu />
-      <Hero heroHTML=props##data##hero##html />
+      <About />
       <Footer
         links=props##data##footerLinks##html
         copyright=props##data##copyright##html
@@ -21,7 +21,6 @@ let make = (~props: PagePropType.props, _children) => {
         description=Config.config##siteDescription
       />
     </div>,
-  /* </Layout> */
 };
 
 let default =
