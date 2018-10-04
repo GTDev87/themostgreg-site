@@ -11,6 +11,7 @@ let make = (~props: PagePropType.props, _children) => {
       <Intro />
       <Menu />
       <About />
+      <Projects />
       <Footer
         links=props##data##footerLinks##html
         copyright=props##data##copyright##html

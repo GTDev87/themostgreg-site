@@ -34,12 +34,15 @@ let traitClass = [%bs.raw {| css(tw`
 `)
 |}];
 
-let traitsClass = [%bs.raw {| css(tw`
+let traitsClass = [%bs.raw
+  {| css(tw`
   w-full
   flex
   flex-wrap
+  justify-center
 `)
-|}];
+|}
+];
 
 let make = _children => {
   ...component,

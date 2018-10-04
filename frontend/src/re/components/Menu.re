@@ -39,7 +39,7 @@ let make = _children => {
                  {ReasonReact.string(menuItem##label)}
                </a>
              )
-          |> ReasonReact.arrayToElement
+          |> ReasonReact.array
         }
       </div>
     </div>,
