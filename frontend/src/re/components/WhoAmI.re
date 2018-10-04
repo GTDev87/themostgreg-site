@@ -8,12 +8,20 @@ let imageSection = [%bs.raw {| css(tw`
   `)
   |}];
 
-let attributeSection = [%bs.raw {| css(tw`
+let attributesSectionClass = [%bs.raw
+  {| css(tw`
   md:w-1/2
+  flex
+  flex-col
+  justify-center
   `)
-  |}];
+  |}
+];
 
 let whoAmIClass = [%bs.raw {| css(tw`
+  w-full
+  flex
+  flex-wrap
 `)
 |}];
 
@@ -22,6 +30,6 @@ let make = _children => {
   render: _self =>
     <div className=whoAmIClass>
       <div className=imageSection> <Image /> </div>
-      <div className=attributeSection> <Attributes /> </div>
+      <div className=attributesSectionClass> <Attributes /> </div>
     </div>,
 };
