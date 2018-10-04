@@ -30,7 +30,7 @@ let attributes: attributes = [
   {label: "Iteration Speed", percentage: 80.},
   {label: "Elixir", percentage: 60.},
   {label: "Culture", percentage: 90.},
-  {label: "Energy", percentage: 100.},
+  {label: "Enthusiasm", percentage: 100.},
   {label: "Bouldering", percentage: 70.},
 ];
 

@@ -4,13 +4,16 @@ let css = Css.css;
 let tw = Css.tw;
 
 let imageSection = [%bs.raw {| css(tw`
+  sm:w-full
   md:w-1/2
   `)
   |}];
 
 let attributesSectionClass = [%bs.raw
   {| css(tw`
+  sm:w-full
   md:w-1/2
+
   flex
   flex-col
   justify-center

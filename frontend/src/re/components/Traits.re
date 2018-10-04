@@ -28,7 +28,9 @@ let traits: traits = [
 ];
 
 let traitClass = [%bs.raw {| css(tw`
-  md:w-1/4
+  sm:w-full
+  md:w-1/2
+  lg:w-1/4
 `)
 |}];
 
