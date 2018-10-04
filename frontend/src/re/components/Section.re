@@ -19,7 +19,7 @@ let titleClass = [%bs.raw
 let make = (~title, children) => {
   ...component,
   render: _self =>
-    <div className=sectionClass>
+    <div className=sectionClass id={String.lowercase(title)}>
       <div className=titleClass> {ReasonReact.string(title)} </div>
       {children |> ReasonReact.array}
     </div>,

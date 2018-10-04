@@ -13,6 +13,9 @@ let make = _children => {
   ...component,
   render: _self =>
     <div className=aboutClass>
-      <Section title="About"> <Traits /> <WhoAmI /> </Section>
+      <Section title="About">
+        <Traits key="traits" />
+        <WhoAmI key="whoami" />
+      </Section>
     </div>,
 };

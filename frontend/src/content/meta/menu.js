@@ -4,10 +4,12 @@ import InfoIcon from 'react-feather/dist/icons/info';
 import BlogIcon from 'react-feather/dist/icons/book';
 
 const menu = [
-  { label: 'Home', to: '/', icon: HomeIcon },
-  { label: 'Blog', to: '/blog', icon: BlogIcon },
-  { label: 'Catalog', to: '/catalog', icon: FolderIcon },
-  { label: 'About', to: '/about', icon: InfoIcon }
+  { label: 'Home', to: '#', icon: HomeIcon },
+  { label: 'About', to: '#about', icon: InfoIcon },
+  { label: 'Projects', to: '#projects', icon: InfoIcon },
+  // { label: 'Blog', to: '/blog', icon: BlogIcon },
+  // { label: 'Catalog', to: '/catalog', icon: FolderIcon },
+  
 ];
 
 export default menu;
