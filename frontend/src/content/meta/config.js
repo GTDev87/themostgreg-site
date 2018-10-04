@@ -1,6 +1,6 @@
 const base = {
-  name: 'Gatsby Starter Kit',
-  url: 'https://github.com/greglobinski/gatsby-starter-kit'
+  name: 'TheMostGreg',
+  url: 'https://themostgreg.com'
 };
 
 const config = {

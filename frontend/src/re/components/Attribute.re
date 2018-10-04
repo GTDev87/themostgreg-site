@@ -53,11 +53,14 @@ let remainingPercentageText = [%bs.raw
 ];
 
 let colorBarPercentageStyle = percentage =>
-  ReactDOMRe.Style.make(~width=string_of_float(percentage) ++ "%", ());
+  ReactDOMRe.Style.make(
+    ~width=string_of_int(percentage |> int_of_float) ++ "%",
+    (),
+  );
 
 let remainingPercentageStyle = percentage =>
   ReactDOMRe.Style.make(
-    ~width=string_of_float(100.0 -. percentage) ++ "%",
+    ~width=string_of_int(100.0 -. percentage |> int_of_float) ++ "%",
     (),
   );
 
