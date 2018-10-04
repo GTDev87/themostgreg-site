@@ -6,12 +6,14 @@ let component = ReasonReact.statelessComponent("Page_Index");
 
 let make = (~props: PagePropType.props, _children) => {
   ...component,
-  render: _self =>
+  render: _self => {
+    Js.log("props##data");
+    Js.log(props##data);
     <div>
       <Intro />
       <Menu />
       <About />
-      <Projects />
+      <Projects projects=props##data##projects />
       <Footer
         links=props##data##footerLinks##html
         copyright=props##data##copyright##html
@@ -22,7 +24,8 @@ let make = (~props: PagePropType.props, _children) => {
         title=Config.config##siteTitle
         description=Config.config##siteDescription
       />
-    </div>,
+    </div>;
+  },
 };
 
 let default =

@@ -3,14 +3,18 @@ let component = ReasonReact.statelessComponent("WhoAmI");
 let css = Css.css;
 let tw = Css.tw;
 
-let imageSection = [%bs.raw {| css(tw`
+let imageSection = [%bs.raw
+  {| css(tw`
+  w-full
   sm:w-full
   md:w-1/2
   `)
-  |}];
+  |}
+];
 
 let attributesSectionClass = [%bs.raw
   {| css(tw`
+  w-full
   sm:w-full
   md:w-1/2
 

@@ -4,7 +4,6 @@ let css = Css.css;
 let tw = Css.tw;
 
 let aboutClass = [%bs.raw {| css(tw`
-  py-16
   px-16
 `)
 |}];

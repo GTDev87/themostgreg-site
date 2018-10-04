@@ -27,12 +27,15 @@ let traits: traits = [
   },
 ];
 
-let traitClass = [%bs.raw {| css(tw`
+let traitClass = [%bs.raw
+  {| css(tw`
+  w-full
   sm:w-full
   md:w-1/2
   lg:w-1/4
 `)
-|}];
+|}
+];
 
 let traitsClass = [%bs.raw
   {| css(tw`

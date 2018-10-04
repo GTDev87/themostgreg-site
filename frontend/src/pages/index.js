@@ -7,6 +7,27 @@ export default (props) => <Index props={props} />;
 
 export const query = graphql`
   query {
+    projects: allMarkdownRemark(filter: {fields: {source: {eq: "projects"}, slug: {ne: null}}}) {
+      edges {
+        node {
+          excerpt(pruneLength: 250)
+          fields {
+            slug
+            prefix
+          }
+          frontmatter {
+            title
+            categories
+            cover{
+              publicURL
+            }
+            images{
+              publicURL
+            }
+          }
+        }
+      }
+    }
     footerLinks: markdownRemark(
       fileAbsolutePath: { regex: "/content/parts/footerLinks/" }
     ) {

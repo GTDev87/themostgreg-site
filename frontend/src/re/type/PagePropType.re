@@ -1,10 +1,13 @@
-type categoryType;
+type imageType = {. "publicURL": string};
 
 type frontmatterType = {
   .
   "title": string,
-  "categories": array(categoryType),
+  "categories": array(string),
+  "cover": imageType,
+  "images": array(imageType),
 };
+
 type fieldType = {
   .
   "slug": string,
@@ -17,7 +20,14 @@ type htmlType = {
   "fields": fieldType,
   "excerpt": string,
 };
-type nodeType;
+
+type nodeType = {
+  .
+  "categories": array(string),
+  "excerpt": string,
+  "frontmatter": frontmatterType,
+};
+
 type edge = {. "node": nodeType};
 
 type postType = {
@@ -28,6 +38,7 @@ type postType = {
 
 type dataProp = {
   .
+  "projects": postType,
   "posts": postType,
   "post": htmlType,
   "footerLinks": htmlType,
