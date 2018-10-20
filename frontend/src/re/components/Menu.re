@@ -6,6 +6,7 @@ let tw = Css.tw;
 let menuClass = [%bs.raw
   {| css(tw`
     w-full
+    h-full
     py-4
     bg-black
     border-0

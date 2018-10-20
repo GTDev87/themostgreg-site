@@ -7,7 +7,7 @@ let introClass = [%bs.raw
     flex
     justify-center
     w-full
-    h-screen
+    h-full
     bg-grey-darkest
   `) |}
 ];
