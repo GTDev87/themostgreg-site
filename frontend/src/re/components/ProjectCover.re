@@ -16,7 +16,7 @@ let projectCoverClass = [%bs.raw
 let projectCoverImageClass = [%bs.raw {| css(tw`
   w-full
   `)
-  |}];
+|}];
 
 let make = (~project, _children) => {
   ...component,
@@ -24,7 +24,7 @@ let make = (~project, _children) => {
     <div className=projectCoverClass>
       <img
         className=projectCoverImageClass
-        src=project##frontmatter##cover##publicURL
+        src=project##node##frontmatter##cover##publicURL
       />
     </div>,
 };

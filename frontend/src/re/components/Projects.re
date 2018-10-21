@@ -30,17 +30,20 @@ let projectCoverImageClass = [%bs.raw
   |}
 ];
 
-let make = (~projects, _children) => {
+let make = (~projects, ~selectProject, _children) => {
   ...component,
   render: _self =>
     <div className=projectsClass>
       <Section title="Projects">
-        <div className=projectsContainerClass>
+        <div key="projects" className=projectsContainerClass>
           {
-            projects##edges
+            projects
             |> Belt.Array.map(_, edge =>
-                 <div className=projectCoverImageClass>
-                   <ProjectCover project=edge##node />
+                 <div
+                   key=edge##node##id
+                   className=projectCoverImageClass
+                   onClick={_e => selectProject(edge##node##id)}>
+                   <ProjectCover project=edge />
                  </div>
                )
             |> ReasonReact.array

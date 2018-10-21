@@ -15,6 +15,7 @@ type fieldType = {
 };
 type htmlType = {
   .
+  "id": string,
   "html": string,
   "frontmatter": frontmatterType,
   "fields": fieldType,
@@ -23,9 +24,11 @@ type htmlType = {
 
 type nodeType = {
   .
+  "id": string,
   "categories": array(string),
   "excerpt": string,
   "frontmatter": frontmatterType,
+  "fields": fieldType,
 };
 
 type edge = {. "node": nodeType};

@@ -6,16 +6,12 @@ let introClass = [%bs.raw
   {| css(tw`
     flex
     justify-center
+    items-center
     w-full
     h-full
     bg-grey-darkest
   `) |}
 ];
-
-let centerClass = [%bs.raw {| css(tw`
-  self-center
-  `)
-|}];
 
 let textClass = [%bs.raw {| css(tw`
   text-white
@@ -50,7 +46,7 @@ let make = _children => {
   ...component,
   render: _self =>
     <div className=introClass>
-      <div className=centerClass>
+      <div>
         <div className=textClass> {ReasonReact.string("The Most Greg")} </div>
         <div className=buttonWrapperClass>
           <a href="#projects" className=buttonClass>

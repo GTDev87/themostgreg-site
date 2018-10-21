@@ -10,6 +10,7 @@ export const query = graphql`
     projects: allMarkdownRemark(filter: {fields: {source: {eq: "projects"}, slug: {ne: null}}}) {
       edges {
         node {
+          id
           excerpt(pruneLength: 250)
           fields {
             slug
