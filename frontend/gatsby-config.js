@@ -36,6 +36,7 @@ module.exports = {
         path: `${__dirname}/src/content/projects/`,
       },
     },
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-catch-links`,
     `gatsby-transformer-sharp`,

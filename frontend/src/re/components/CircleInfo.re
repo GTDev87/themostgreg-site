@@ -44,7 +44,10 @@ let circleInfoClass = [%bs.raw
   flex-col
   m-12
   text-center
+
 `)
+
+
 |}
 ];
 
@@ -68,7 +71,7 @@ let centerWrapper = [%bs.raw {| css(tw`
 let make = (~size=MD, ~comp, ~label, ~copy, _children) => {
   ...component,
   render: _self =>
-    <div className=circleInfoClass>
+    <div className={circleInfoClass ++ " transition transition-slow"}>
       <div>
         <div className=centerWrapper>
           <div className={iconCircleClass(size)}> comp </div>

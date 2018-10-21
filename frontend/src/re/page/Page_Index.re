@@ -1,6 +1,7 @@
 [%bs.raw {|require('../../../../../src/styles/styles.css')|}];
 [%bs.raw {|require('@react-website-themes/default/styles/variables')|}];
 [%bs.raw {|require('@react-website-themes/default/styles/global')|}];
+[%bs.raw {|require('tailwindcss/tailwind.css')|}];
 
 let css = Css.css;
 let tw = Css.tw;
