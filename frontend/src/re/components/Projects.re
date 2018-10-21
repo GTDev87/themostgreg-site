@@ -5,7 +5,7 @@ let tw = Css.tw;
 
 let projectsClass = [%bs.raw {| css(tw`
   px-16
-
+  mb-4
 `)
 |}];
 
@@ -22,10 +22,14 @@ let projectsContainerClass = [%bs.raw
 
 let projectCoverImageClass = [%bs.raw
   {| css(tw`
+  cursor-pointer
   w-full
   sm:w-full
   md:w-1/2
   lg:w-1/3
+  border-solid
+  border-grey-light
+  hover:border-teal
   `)
   |}
 ];

@@ -32,7 +32,7 @@ let projectModalImageClass = [%bs.raw
 let projectModalTitleClass = [%bs.raw
   {| css(tw`
     flex
-    justify-between
+    flex-wrap
   `)
   |}
 ];
@@ -44,8 +44,24 @@ let projectModalTextCategoriesClass = [%bs.raw {| css(tw`
 
 let projectModalTextContentClass = [%bs.raw {| css(tw`
     p-8
-    `)
-    |}];
+  `)
+|}];
+
+let projectModalTitleTextClass = [%bs.raw
+  {| css(tw`
+  w-full
+  md:w-1/2
+`)
+|}
+];
+
+let projectModalCategoriesClass = [%bs.raw
+  {| css(tw`
+  w-full
+  md:w-1/2
+`)
+|}
+];
 
 let joinStringList = (listString: list(string), glue: string): string =>
   Belt.List.reduce(listString, "", (memo, ele) =>
@@ -59,8 +75,10 @@ let make = (~project, _children) => {
       <div className=projectModalImageClass> <ProjectCover project /> </div>
       <div className=projectModalTextContentClass>
         <div className=projectModalTitleClass>
-          <h3> {ReasonReact.string(project##node##frontmatter##title)} </h3>
-          <div>
+          <h3 className=projectModalTitleTextClass>
+            {ReasonReact.string(project##node##frontmatter##title)}
+          </h3>
+          <div className=projectModalCategoriesClass>
             <h4 className=projectModalTextCategoriesClass>
               {ReasonReact.string("Categories: ")}
             </h4>
@@ -73,7 +91,7 @@ let make = (~project, _children) => {
           </div>
         </div>
         <div className=projectModalDividerClass />
-        <p> {ReasonReact.string(project##node##excerpt)} </p>
+        <div dangerouslySetInnerHTML={"__html": project##node##html} />
       </div>
     </div>,
 };

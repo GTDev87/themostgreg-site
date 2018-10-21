@@ -5,4 +5,4 @@ cover: ellacanta.jpg
 images: ["ellacanta.jpg"]
 ---
 
-Consultant Web developer at Ella Canta.  Creating AB Test for user behavior.  Implementing CSS and javascript interactions for a resonsive website.
+Consultant Web developer at [Ella Canta](https://www.ellacanta.com/).  Creating AB Test for user behavior.  Implementing CSS and javascript interactions for a resonsive website.

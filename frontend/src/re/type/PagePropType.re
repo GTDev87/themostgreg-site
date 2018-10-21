@@ -25,6 +25,7 @@ type htmlType = {
 type nodeType = {
   .
   "id": string,
+  "html": string,
   "categories": array(string),
   "excerpt": string,
   "frontmatter": frontmatterType,
