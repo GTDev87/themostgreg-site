@@ -16,7 +16,7 @@ let modalOverlayClass = [%bs.raw
 
 let modalOuterClass = [%bs.raw
   {| css(tw`
-    fixed
+  fixed
   w-screen
   h-screen
 
@@ -28,16 +28,12 @@ let modalOuterClass = [%bs.raw
 |}
 ];
 
-let modalInternalClass = [%bs.raw
-  {| css(tw`
-  w-1/2
-  h-full
+let modalInternalClass = [%bs.raw {| css(tw`
+  w-2/3
   flex
   bg-white
-  opacity-100
 `)
-|}
-];
+|}];
 
 let modalCenterClass = [%bs.raw {| css(tw`
   self-center

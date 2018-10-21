@@ -1,8 +1,8 @@
 ---
 title: Ella Canta
-categories: ["nodejs", "javascript", "ruby on rails"]
+categories: ["AB Testing", "Javascript"]
 cover: ellacanta.jpg
 images: ["ellacanta.jpg"]
 ---
 
-Ella Canta
+Consultant Web developer at Ella Canta.  Creating AB Test for user behavior.  Implementing CSS and javascript interactions for a resonsive website.

@@ -1,8 +1,8 @@
 ---
 title: Illume
-categories: ["nodejs", "javascript", "ruby on rails"]
+categories: ["React Native", "ReasonML"]
 cover: illume.jpg
 images: ["illume.jpg"]
 ---
 
-Illume
+Illume Affirmation Application.  Week long hackathon project with designer Lama Younes.  Application deployed to IOS and Android using ReasonML.

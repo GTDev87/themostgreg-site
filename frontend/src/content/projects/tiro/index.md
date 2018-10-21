@@ -1,8 +1,8 @@
 ---
 title: Tiro
-categories: ["nodejs", "javascript", "ruby on rails"]
+categories: ["ReasonML", "Elixir", "Kubernetes"]
 cover: tiro.jpg
 images: ["tiro.jpg"]
 ---
 
-Real and Open Tiro
+Real and Open.  Created Tiro application which provides deep analytics around test data.  Architected frontend in ReasonML, backend in Phoenix Elixir, and ops infastructure using Docker and Kubernetes.
