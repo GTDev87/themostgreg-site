@@ -53,9 +53,6 @@ let circleInfoClass =
     "transition",
   );
 
-Js.log("circleInfoClass");
-Js.log(circleInfoClass);
-
 let labelClass = [%bs.raw
   {| css(tw`
   flex

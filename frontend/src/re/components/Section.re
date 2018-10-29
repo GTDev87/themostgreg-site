@@ -14,6 +14,7 @@ let titleClass = [%bs.raw
   flex
   justify-center
   underline
+  mb-8
   `) |}
 ];
 

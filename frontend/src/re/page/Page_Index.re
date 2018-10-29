@@ -80,6 +80,7 @@ let make = (~props: PagePropType.props, _children) => {
         projects
         selectProject={pid => self.send(SelectProject(Some(pid)))}
       />
+      <Contact />
       <Footer
         links=props##data##footerLinks##html
         copyright=props##data##copyright##html
