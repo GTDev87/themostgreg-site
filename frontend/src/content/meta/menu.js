@@ -7,7 +7,7 @@ const menu = [
   { label: 'Home', to: '#', icon: HomeIcon },
   { label: 'About', to: '#about', icon: InfoIcon },
   { label: 'Projects', to: '#projects', icon: InfoIcon },
-  // { label: 'Blog', to: '/blog', icon: BlogIcon },
+  { label: 'Contact', to: '#contact', icon: BlogIcon },
   // { label: 'Catalog', to: '/catalog', icon: FolderIcon },
   
 ];

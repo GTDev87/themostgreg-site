@@ -43,6 +43,7 @@ let traitsClass = [%bs.raw
   flex
   flex-wrap
   justify-center
+  pb-12
 `)
 |}
 ];

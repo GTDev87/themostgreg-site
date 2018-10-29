@@ -20,7 +20,6 @@ let projectModalDividerClass = [%bs.raw
   border-grey-light
   border-solid
   w-full
-  mb-4
   `)
   |}
 ];
@@ -82,20 +81,21 @@ let make = (~project, _children) => {
           <h3 className=projectModalTitleTextClass>
             {ReasonReact.string(project##node##frontmatter##title)}
           </h3>
-          <div className=projectModalCategoriesClass>
-            <h4 className=projectModalTextCategoriesClass>
-              {ReasonReact.string("Categories: ")}
-            </h4>
-            {
-              project##node##frontmatter##categories
-              |> Belt.List.fromArray
-              |> joinStringList(_, ", ")
-              |> ReasonReact.string
-            }
-          </div>
         </div>
         <div className=projectModalDividerClass />
         <div dangerouslySetInnerHTML={"__html": project##node##html} />
+        <div className=projectModalDividerClass />
+        <div className=projectModalCategoriesClass>
+          <h4 className=projectModalTextCategoriesClass>
+            {ReasonReact.string("Categories: ")}
+          </h4>
+          {
+            project##node##frontmatter##categories
+            |> Belt.List.fromArray
+            |> joinStringList(_, ", ")
+            |> ReasonReact.string
+          }
+        </div>
       </div>
     </div>,
 };

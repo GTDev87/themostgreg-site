@@ -28,21 +28,6 @@ let messageClass = [%bs.raw
 |}
 ];
 
-let buttonClass = [%bs.raw
-  {| css(tw`
-  bg-grey-darkest
-    text-white
-    border-solid
-    text-xl
-    py-2
-    px-4
-    hover:bg-teal
-    hover:text-white
-    border-2
-    no-underline
-`)
-|}
-];
 
 let formClass = [%bs.raw {| css(tw`
   w-full
@@ -70,8 +55,9 @@ let make = _children => {
         placeholder="Your message"
         className=messageClass
       />
-      <button type_="submit" className=buttonClass>
-        {ReasonReact.string("Send")}
+      
+      <button type_="submit">
+        <CTA text="Send" />
       </button>
     </form>,
 };

@@ -45,8 +45,9 @@ let circleInfoClass =
         flex
         justify-center
         flex-col
-        m-12
+        mx-12
         text-center
+        mb-4
         `)
       |}
     ],

@@ -22,15 +22,6 @@ let textClass = [%bs.raw {| css(tw`
 
 let buttonClass = [%bs.raw
   {| css(tw`
-    bg-grey-darkest
-    text-white
-    border-solid
-    text-xl
-    py-2
-    px-4
-    hover:bg-teal
-    hover:text-white
-    border-2
     no-underline
   `)
 |}
@@ -50,7 +41,7 @@ let make = _children => {
         <div className=textClass> {ReasonReact.string("The Most Greg")} </div>
         <div className=buttonWrapperClass>
           <a href="#projects" className=buttonClass>
-            {ReasonReact.string("View my work")}
+            <CTA text="View my work" />
           </a>
         </div>
       </div>

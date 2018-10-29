@@ -21,15 +21,29 @@ let jpgClass = [%bs.raw
   |}
 ];
 
+let buttonClass = [%bs.raw
+  {| css(tw`
+    no-underline
+    flex
+    justify-center
+  `)
+  |}
+];
+
 let make = _children => {
   ...component,
   render: _self =>
     <div className=imageClass>
-      <CircleInfo
-        size=LG
-        label="Who is Greg?"
-        copy="Freelancer, Developer, Coach, Consultant, Climber, Traceur, Dog Lover.  I have a passion and borderline obession with optimizing process."
-        comp={<div className={jpgClass ++ " bg-greg-image"} />}
-      />
+      <div>
+        <CircleInfo
+          size=LG
+          label="Who is Greg?"
+          copy="Freelancer, Developer, Coach, Consultant, Climber, Traceur, Dog Lover.  I have a passion and borderline obession with optimizing process."
+          comp={<div className={jpgClass ++ " bg-greg-image"} />}
+        />
+        <a href="#contact" className=buttonClass >
+          <CTA text="Contact Me" color=White />
+        </a>
+      </div>
     </div>,
 };
