@@ -9,6 +9,7 @@ let emailClass = [%bs.raw
   w-full
   bg-black
   text-white
+  p-2
   mb-4
 `)
 |}
@@ -21,6 +22,7 @@ let messageClass = [%bs.raw
   mb-4
   bg-black
   text-white
+  p-2
   h-48
 `)
 |}
@@ -43,7 +45,10 @@ let buttonClass = [%bs.raw
 ];
 
 let formClass = [%bs.raw {| css(tw`
-  w-1/3
+  w-full
+  sm:w-full
+  md:w-1/2
+  lg:w-1/3
 `)
 |}];
 
