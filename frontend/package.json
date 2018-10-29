@@ -53,6 +53,7 @@
   },
   "devDependencies": {
     "@babel/preset-flow": "^7.0.0-rc.1",
+    "autoprefixer": "^9.2.1",
     "babel-eslint": "7.2.3",
     "babel-plugin-emotion": "^9.2.6",
     "babel-plugin-tailwind-components": "^0.5.10",

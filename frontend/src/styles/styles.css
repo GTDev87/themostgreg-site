@@ -1,3 +1,5 @@
+/* purgecss start ignore */
 .bg-greg-image {
-  background-image: url('./greg.jpg');
+  background-image: url("/greg.jpg");
 };
+/* purgecss end ignore */
