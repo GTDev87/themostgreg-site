@@ -1,6 +1,7 @@
 let component = ReasonReact.statelessComponent("CircleInfo");
 
 let css = Css.css;
+let cx = Css.cx;
 let tw = Css.tw;
 
 type sizes =
@@ -37,19 +38,23 @@ let iconCircleClass = size =>
 |}
   };
 
-let circleInfoClass = [%bs.raw
-  {| css(tw`
-  flex
-  justify-center
-  flex-col
-  m-12
-  text-center
+let circleInfoClass =
+  cx(
+    [%bs.raw
+      {| css(tw`
+        flex
+        justify-center
+        flex-col
+        m-12
+        text-center
+        `)
+      |}
+    ],
+    "transition",
+  );
 
-`)
-
-
-|}
-];
+Js.log("circleInfoClass");
+Js.log(circleInfoClass);
 
 let labelClass = [%bs.raw
   {| css(tw`
@@ -71,7 +76,7 @@ let centerWrapper = [%bs.raw {| css(tw`
 let make = (~size=MD, ~comp, ~label, ~copy, _children) => {
   ...component,
   render: _self =>
-    <div className={circleInfoClass ++ " transition transition-slow"}>
+    <div className=circleInfoClass>
       <div>
         <div className=centerWrapper>
           <div className={iconCircleClass(size)}> comp </div>

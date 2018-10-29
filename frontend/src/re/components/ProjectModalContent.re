@@ -3,11 +3,15 @@ let component = ReasonReact.statelessComponent("ProjectModalContent");
 let css = Css.css;
 let tw = Css.tw;
 
-let projectModalContentClass = [%bs.raw {| css(tw`
+let projectModalContentClass = [%bs.raw
+  {| css(tw`
   h-full
   w-full
+  overflow-y-scroll
+  max-h-screen
 `)
-|}];
+|}
+];
 
 let projectModalDividerClass = [%bs.raw
   {| css(tw`
