@@ -11,6 +11,7 @@ type attribute = {
 let attributeClass = [%bs.raw {| css(tw`
   flex
   text-white
+  relative
 `)
 |}];
 
@@ -18,6 +19,9 @@ let labelClass = [%bs.raw {| css(tw`
   w-1/4
   h-6
   bg-teal
+  flex
+  justify-center
+  items-center
   `)
   |}];
 
@@ -39,7 +43,8 @@ let remainingPercentageClass = [%bs.raw {| css(tw`
   |}];
 
 let labelTextClass = [%bs.raw {| css(tw`
-  ml-2
+  text-xs
+  lg:text-sm
   `)
   |}];
 
@@ -47,9 +52,25 @@ let remainingPercentageText = [%bs.raw
   {| css(tw`
   text-grey-darkest
   float-right
-  mr-2
+  h-full
+  text-xs
+  lg:text-sm
   `)
   |}
+];
+
+let alignPercentageText = [%bs.raw
+{| css(tw`
+  h-full
+  w-full
+  absolute
+  flex
+  justify-end
+  text-black
+  items-center
+  pr-2
+`)
+|}
 ];
 
 let colorBarPercentageStyle = percentage =>
@@ -82,13 +103,17 @@ let make = (~attribute, _children) => {
           style={remainingPercentageStyle(attribute.percentage)}
           className=remainingPercentageClass>
           <div className=remainingPercentageText>
-            {
-              ReasonReact.string(
-                (attribute.percentage |> string_of_float) ++ "%",
-              )
-            }
+            
           </div>
         </div>
+        
       </div>
+      <div className=alignPercentageText>
+        {
+          ReasonReact.string(
+            (attribute.percentage |> string_of_float) ++ "%",
+          )
+        }
+        </div>
     </div>,
 };

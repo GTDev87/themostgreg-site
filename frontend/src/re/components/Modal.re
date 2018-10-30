@@ -38,11 +38,6 @@ let modalInternalClass = [%bs.raw
 |}
 ];
 
-let modalCenterClass = [%bs.raw {| css(tw`
-  self-center
-`)
-|}];
-
 let make =
     (
       ~modalSelect: option('a),

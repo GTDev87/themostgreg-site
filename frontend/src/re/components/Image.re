@@ -7,6 +7,7 @@ let imageClass = [%bs.raw {| css(tw`
   w-full
   flex
   justify-center
+  mb-8
 `)
 |}];
 
