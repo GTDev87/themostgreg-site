@@ -13,10 +13,13 @@ let projectModalContentClass = [%bs.raw
 |}
 ];
 
-let projectModalDividerClass = [%bs.raw
+let projectModelHtmlClass = [%bs.raw
   {| css(tw`
   border-0
   border-b-2
+  border-t-2
+  py-2
+  my-1
   border-grey-light
   border-solid
   w-full
@@ -61,7 +64,6 @@ let projectModalTitleTextClass = [%bs.raw
 let projectModalCategoriesClass = [%bs.raw
   {| css(tw`
   w-full
-  md:w-1/2
 `)
 |}
 ];
@@ -82,9 +84,7 @@ let make = (~project, _children) => {
             {ReasonReact.string(project##node##frontmatter##title)}
           </h3>
         </div>
-        <div className=projectModalDividerClass />
-        <div dangerouslySetInnerHTML={"__html": project##node##html} />
-        <div className=projectModalDividerClass />
+        <div className=projectModelHtmlClass dangerouslySetInnerHTML={"__html": project##node##html} />
         <div className=projectModalCategoriesClass>
           <h4 className=projectModalTextCategoriesClass>
             {ReasonReact.string("Categories: ")}

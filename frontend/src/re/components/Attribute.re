@@ -16,7 +16,7 @@ let attributeClass = [%bs.raw {| css(tw`
 |}];
 
 let labelClass = [%bs.raw {| css(tw`
-  w-1/4
+  w-1/3
   h-6
   bg-teal
   flex
@@ -26,7 +26,7 @@ let labelClass = [%bs.raw {| css(tw`
   |}];
 
 let percentageClass = [%bs.raw {| css(tw`
-  w-3/4
+  w-2/3
   h-6
   flex
   `)

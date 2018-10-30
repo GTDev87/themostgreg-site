@@ -7,18 +7,26 @@ let menuClass = [%bs.raw
   {| css(tw`
     w-full
     h-full
-    py-4
+    
     bg-black
     border-0
     border-b-4
     border-teal
     border-solid
+
+    py-4
+    flex
+    justify-between
+
+    md:block
+
+    
   `) |}
 ];
 
 let linkClass = [%bs.raw
   {| css(tw`
-  pl-12
+  px-6
   normal-case
   text-white
   no-underline
@@ -28,7 +36,6 @@ let linkClass = [%bs.raw
 let make = _children => {
   ...component,
   render: _self =>
-    <div>
       <div className=menuClass>
         {
           Config.menu
@@ -43,5 +50,4 @@ let make = _children => {
           |> ReasonReact.array
         }
       </div>
-    </div>,
 };
