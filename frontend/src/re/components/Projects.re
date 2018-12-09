@@ -13,6 +13,7 @@ let projectsContainerClass = [%bs.raw
   {| css(tw`
     pt-8
     w-full
+    h-full
     flex
     flex-wrap
     justify-center
@@ -22,14 +23,23 @@ let projectsContainerClass = [%bs.raw
 
 let projectCoverImageClass = [%bs.raw
   {| css(tw`
-  cursor-pointer
-  w-full
-  sm:w-full
-  md:w-1/2
-  lg:w-1/3
-  border-solid
-  border-grey-light
-  hover:border-teal
+    w-full
+    sm:w-full
+    md:w-1/2
+    lg:w-1/3
+    p-2
+    `)
+  |}
+];
+
+let projectCoverInternalImageClass = [%bs.raw
+  {| css(tw`
+    h-full
+    border-2
+    cursor-pointer
+    border-solid
+    border-grey-light
+    hover:border-teal
   `)
   |}
 ];
@@ -47,7 +57,9 @@ let make = (~projects, ~selectProject, _children) => {
                    key=edge##node##id
                    className=projectCoverImageClass
                    onClick={_e => selectProject(edge##node##id)}>
-                   <ProjectCover project=edge />
+                   <div className=projectCoverInternalImageClass>
+                    <ProjectCover project=edge />
+                   </div>
                  </div>
                )
             |> ReasonReact.array

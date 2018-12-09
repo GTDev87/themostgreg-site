@@ -103,10 +103,8 @@ let make = (~attribute, _children) => {
           style={remainingPercentageStyle(attribute.percentage)}
           className=remainingPercentageClass>
           <div className=remainingPercentageText>
-            
           </div>
         </div>
-        
       </div>
       <div className=alignPercentageText>
         {
