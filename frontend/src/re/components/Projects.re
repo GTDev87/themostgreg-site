@@ -23,11 +23,11 @@ let projectsContainerClass = [%bs.raw
 
 let projectCoverImageClass = [%bs.raw
   {| css(tw`
-    w-full
-    sm:w-full
-    md:w-1/2
-    lg:w-1/3
-    p-2
+      w-full
+      sm:w-full
+      md:w-1/2
+      lg:w-1/3
+      p-2
     `)
   |}
 ];
@@ -40,6 +40,7 @@ let projectCoverInternalImageClass = [%bs.raw
     border-solid
     border-grey-light
     hover:border-teal
+    hover:opacity-75
   `)
   |}
 ];
