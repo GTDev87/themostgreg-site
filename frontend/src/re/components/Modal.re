@@ -24,6 +24,7 @@ let modalOuterClass = [%bs.raw
   justify-center
   items-center
   pointer-events-none
+  z-50
 `)
 |}
 ];
