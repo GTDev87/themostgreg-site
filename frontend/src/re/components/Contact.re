@@ -30,10 +30,10 @@ let make = _children => {
   render: _self =>
     <div className=contactClass>
       <Section title="Contact">
-          <div className=contactTextClass> {ReasonReact.string("Message me if you want to work with me!")} </div>
-          <div className=centerFormClass>
+        <div key="contact-text" className=contactTextClass> {ReasonReact.string("Message me if you want to work with me!")} </div>
+        <div key="contact-form" className=centerFormClass>
           <ContactForm />
-          </div>
-        </Section>
+        </div>
+      </Section>
     </div>,
 };

@@ -1,6 +1,7 @@
 let component = ReasonReact.statelessComponent("Attributes");
 
 let css = Css.css;
+let cx = Css.cx;
 let tw = Css.tw;
 
 let attributesClass = [%bs.raw {| css(tw`
@@ -34,20 +35,30 @@ let attributes: attributes = [
   {label: "Bouldering", percentage: 70.},
 ];
 
+let classTransitionIn = (waypointEntered, className) => {
+  waypointEntered ? className : "opacity-0"
+};
+
+let circleInfoTransitionInClasses = "transition transition-timing-ease-in transition-slower";
+
 let make = _children => {
   ...component,
   render: _self =>
     <div className=attributesClass>
-      <div className=barsClass>
-        {
-          attributes
-          |> Belt.List.map(_, (attribute: Attribute.attribute) =>
-               <div className=attributesAttributeClass key={attribute.label}>
-                 <Attribute attribute />
-               </div>
-             )
-          |> Utils.ReasonReact.listToReactArray
-        }
-      </div>
+      <WaypointGenerator wayKey="attributes">
+        ...{(~waypointEntered) => {
+          <div className=cx(barsClass, classTransitionIn(waypointEntered, circleInfoTransitionInClasses))>
+            {
+              attributes
+              |> Belt.List.map(_, (attribute: Attribute.attribute) =>
+                  <div className=attributesAttributeClass key={attribute.label}>
+                    <Attribute attribute />
+                  </div>
+                )
+              |> Utils.ReasonReact.listToReactArray
+            }
+          </div>
+        }}
+      </WaypointGenerator>
     </div>,
 };

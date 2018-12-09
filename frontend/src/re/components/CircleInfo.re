@@ -11,48 +11,40 @@ type sizes =
 let iconCircleClass = size =>
   switch (size) {
   | MD =>
-    %bs.raw
-    {| css(tw`
-  rounded-full
-  h-32
-  w-32
-  flex
-  items-center
-  justify-center
-  bg-teal
-  mb-4
-`)
-|}
+    %bs.raw {| css(tw`
+      rounded-full
+      h-32
+      w-32
+      flex
+      items-center
+      justify-center
+      bg-teal
+      mb-4
+    `)
+    |}
   | LG =>
     %bs.raw
     {| css(tw`
-  rounded-full
-  h-64
-  w-64
-  flex
-  items-center
-  justify-center
-  bg-teal
-  mb-4
-`)
-|}
+      rounded-full
+      h-64
+      w-64
+      flex
+      items-center
+      justify-center
+      bg-teal
+      mb-4
+    `)
+    |}
   };
 
-let circleInfoClass =
-  cx(
-    [%bs.raw
-      {| css(tw`
-        flex
-        justify-center
-        flex-col
-        mx-12
-        text-center
-        mb-4
-        `)
-      |}
-    ],
-    "transition",
-  );
+let circleInfoClass = [%bs.raw {| css(tw`
+  flex
+  justify-center
+  flex-col
+  m-8
+  text-center
+`)|}
+];
 
 let labelClass = [%bs.raw
   {| css(tw`
@@ -71,20 +63,30 @@ let centerWrapper = [%bs.raw {| css(tw`
 `)
 |}];
 
+let classTransitionIn = (waypointEntered, className) => {
+  waypointEntered ? className : "opacity-0"
+};
+
+let circleInfoTransitionInClasses = "transition transition-timing-ease-in transition-slower";
+
 let make = (~size=MD, ~comp, ~label, ~copy, _children) => {
   ...component,
   render: _self =>
-    <div className=circleInfoClass>
-      <div>
-        <div className=centerWrapper>
-          <div className={iconCircleClass(size)}> comp </div>
+    <WaypointGenerator wayKey=label>
+      ...{(~waypointEntered) => {
+        <div className=cx(circleInfoClass, classTransitionIn(waypointEntered, circleInfoTransitionInClasses))>
+          <div>
+            <div className=centerWrapper>
+              <div className={iconCircleClass(size)}> comp </div>
+            </div>
+            <div className=centerWrapper>
+              <div className=labelClass> {ReasonReact.string(label)} </div>
+            </div>
+            <div className=centerWrapper>
+              <div> {ReasonReact.string(copy)} </div>
+            </div>
+          </div>
         </div>
-        <div className=centerWrapper>
-          <div className=labelClass> {ReasonReact.string(label)} </div>
-        </div>
-        <div className=centerWrapper>
-          <div> {ReasonReact.string(copy)} </div>
-        </div>
-      </div>
-    </div>,
+      }}
+    </WaypointGenerator>
 };

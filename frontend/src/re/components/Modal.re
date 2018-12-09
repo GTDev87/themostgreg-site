@@ -14,20 +14,16 @@ let modalOverlayClass = [%bs.raw
 |}
 ];
 
-let modalOuterClass = [%bs.raw
-  {| css(tw`
+let modalOuterClass = [%bs.raw {| css(tw`
   fixed
   w-screen
   h-screen
-
   flex
   justify-center
   items-center
   pointer-events-none
   z-50
-`)
-|}
-];
+`)|}];
 
 let modalInternalClass = [%bs.raw
   {| css(tw`

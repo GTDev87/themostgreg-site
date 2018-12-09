@@ -4,15 +4,13 @@ let css = Css.css;
 let tw = Css.tw;
 
 let projectCoverClass = [%bs.raw {| css(tw`
-
   h-full
 `)
 |}];
 
 let projectCoverImageClass = [%bs.raw {| css(tw`
   w-full
-  `)
-|}];
+`) |}];
 
 let make = (~project, _children) => {
   ...component,

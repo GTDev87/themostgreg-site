@@ -48,6 +48,7 @@
     "react-facebook": "^5.0.3",
     "react-feather": "^1.1.1",
     "react-helmet": "^5.2.0",
+    "react-waypoint": "^8.1.0",
     "reason-apollo": "^0.14.1",
     "reason-react": "0.4.2"
   },
