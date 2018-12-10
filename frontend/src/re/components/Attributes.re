@@ -36,7 +36,9 @@ let attributes: attributes = [
 ];
 
 let classTransitionIn = (waypointEntered, className) => {
-  waypointEntered ? className : "opacity-0"
+  let hiddenOpacity = [%bs.raw {| css(tw` opacity-0 `)|}];
+
+  waypointEntered ? className : hiddenOpacity;
 };
 
 let circleInfoTransitionInClasses = "transition transition-timing-ease-in transition-slower";
