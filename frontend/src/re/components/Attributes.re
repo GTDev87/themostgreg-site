@@ -49,7 +49,7 @@ let make = _children => {
     <div className=attributesClass>
       <WaypointGenerator wayKey="attributes">
         ...{(~waypointEntered) => {
-          <div className=cx(barsClass, classTransitionIn(waypointEntered, circleInfoTransitionInClasses))>
+          <div className=(barsClass  ++ " " ++ classTransitionIn(waypointEntered, circleInfoTransitionInClasses))>
             {
               attributes
               |> Belt.List.map(_, (attribute: Attribute.attribute) =>

@@ -78,7 +78,7 @@ let make = (~size=MD, ~comp, ~label, ~copy, _children) => {
   render: _self =>
     <WaypointGenerator wayKey=label>
       ...{(~waypointEntered) => {
-        <div className=cx(circleInfoClass, classTransitionIn(waypointEntered, circleInfoTransitionInClasses))>
+        <div className=(circleInfoClass ++ " " ++ classTransitionIn(waypointEntered, circleInfoTransitionInClasses))>
           <div>
             <div className=centerWrapper>
               <div className={iconCircleClass(size)}> comp </div>
