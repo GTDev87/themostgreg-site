@@ -18,6 +18,12 @@ module.exports = {
         },
       })
     }),
+    {
+      resolve: `gatsby-mdx`,
+      options: {
+        extensions: [".mdx", ".md"]
+      }
+    },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-catch-links`,

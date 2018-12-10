@@ -1,9 +1,12 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
-import TemplatePost from '../../lib/es6_global/src/re/template/Template_Post.bs.js';
+import Page from '../../lib/es6_global/src/re/template/Template_Post.bs.js';
+import { withMDXScope } from "gatsby-mdx/context";
 
-export default (props) => <TemplatePost props={props} />;
+const MDXPage = withMDXScope(Page);
+
+export default (props) => <MDXPage props={props} />;
 
 export const query = graphql`
   query PostTemplateQuery($slug: String!) {

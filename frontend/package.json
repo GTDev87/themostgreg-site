@@ -13,6 +13,8 @@
     "lint": "eslint src"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^0.16.6",
+    "@mdx-js/tag": "^0.16.6",
     "@react-website-themes/default": "^0.0.17",
     "browserslist": "^4.3.4",
     "emotion": "^9.2.9",
@@ -20,6 +22,7 @@
     "facepaint": "^1.2.1",
     "gatsby": "2.0.0",
     "gatsby-image": "2.0.5",
+    "gatsby-mdx": "^0.2.0",
     "gatsby-plugin-catch-links": "2.0.2",
     "gatsby-plugin-emotion": "2.0.5",
     "gatsby-plugin-feed": "2.0.0-rc.0",

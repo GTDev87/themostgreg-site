@@ -5,6 +5,8 @@ const PurgeCssPlugin = require(`purgecss-webpack-plugin`);
 const glob = require(`glob`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const routes = require('./src/content/meta/routes');
+const componentWithMDXScope = require("gatsby-mdx/component-with-mdx-scope");
+
 
 const PATHS = {
   src: path.join(__dirname, `src`)
@@ -140,6 +142,10 @@ exports.createPages = ({ graphql, actions }) => {
               createPage({
                 path: `${edge.node.fields.source}${edge.node.fields.slug}`,
                 component: route.template,
+                // componentWithMDXScope(
+                //   route.template,
+                //   node.code.scope
+                // ),
                 context: route.context ? route.context(edge, index, edges) : {},
               });
             });
