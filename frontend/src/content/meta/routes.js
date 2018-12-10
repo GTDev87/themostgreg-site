@@ -2,6 +2,7 @@ const path = require('path');
 
 const postTemplate = path.resolve('./src/templates/PostTemplate.js');
 const pageTemplate = path.resolve('./src/templates/PageTemplate.js');
+const proposalTemplate = path.resolve('./src/templates/ProposalTemplate.js');
 
 const routesArray = [
   {path: "parts"},
@@ -35,7 +36,7 @@ const routesArray = [
   {path: "projects"},
   {
     path: "proposals",
-    template: pageTemplate,
+    template: proposalTemplate,
     context: (edge) => {
       const slug = edge.node.fields.slug;
       const source = edge.node.fields.source;

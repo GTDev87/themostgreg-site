@@ -24,7 +24,6 @@ let make = (~props: PagePropType.props, _children) => {
     };
 
     <div>
-      <Menu />
       <Article>
         <Heading title=props##data##post##frontmatter##title />
         <Meta
