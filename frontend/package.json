@@ -50,7 +50,8 @@
     "react-helmet": "^5.2.0",
     "react-waypoint": "^8.1.0",
     "reason-apollo": "^0.14.1",
-    "reason-react": "0.4.2"
+    "reason-react": "0.4.2",
+    "glhd-tailwindcss-transitions": "^0.3.0"
   },
   "devDependencies": {
     "@babel/preset-flow": "^7.0.0-rc.1",
@@ -69,7 +70,6 @@
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-react": "7.1.0",
     "gatsby-plugin-postcss": "^2.0.0",
-    "glhd-tailwindcss-transitions": "^0.3.0",
     "graphql_ppx": "^0.2.7",
     "jest": "^23.6.0",
     "js-yaml": "^3.12.0",

@@ -1,9 +1,12 @@
 [@bs.module "react-waypoint"]
 external comp: ReasonReact.reactClass = "default";
 
-let make = (~onEnter, children) =>
+let make = (~onEnter, ~wayKey, children) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=comp,
-    ~props={"onEnter": onEnter},
+    ~props={
+      "key": wayKey,
+      "onEnter": onEnter
+    },
     children,
   );

@@ -16,13 +16,13 @@ let make = (~wayKey, children) => {
     switch (action) {
     | EnterWaypoint => {
       Js.log("entered waypoint");
-      ReasonReact.Update({ waypointEntered: true })
+      ReasonReact.Update({ waypointEntered: true });
     }
     | Noop => ReasonReact.NoUpdate
     },
   render: ({send, state}) =>
     <Waypoint
-      key=wayKey
+      wayKey
       onEnter=((_) => send(state.waypointEntered ? Noop : EnterWaypoint))
     >
       {children(~waypointEntered=state.waypointEntered)}
