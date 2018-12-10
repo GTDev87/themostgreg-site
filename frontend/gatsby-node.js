@@ -4,6 +4,7 @@ const Promise = require('bluebird');
 const PurgeCssPlugin = require(`purgecss-webpack-plugin`);
 const glob = require(`glob`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
+const routes = require('./src/content/meta/routes');
 
 const PATHS = {
   src: path.join(__dirname, `src`)
@@ -71,11 +72,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const postTemplate = path.resolve('./src/templates/PostTemplate.js');
-    const pageTemplate = path.resolve('./src/templates/PageTemplate.js');
-    const categoryTemplate = path.resolve(
-      './src/templates/CategoryTemplate.js'
-    );
+    const categoryTemplate = path.resolve('./src/templates/CategoryTemplate.js');
 
     resolve(
       graphql(`
@@ -108,7 +105,6 @@ exports.createPages = ({ graphql, actions }) => {
           }
 
           const items = result.data.allMarkdownRemark.edges;
-
           const categorySet = new Set();
 
           // Create category list
@@ -138,40 +134,16 @@ exports.createPages = ({ graphql, actions }) => {
             });
           });
 
-          // Create posts
-          const posts = items.filter(item => item.node.fields.source === 'posts');
-          posts.forEach(({ node }, index) => {
-            const slug = node.fields.slug;
-            const next = index === 0 ? undefined : posts[index - 1].node;
-            const prev =
-              index === posts.length - 1 ? undefined : posts[index + 1].node;
-
-            createPage({
-              path: slug,
-              component: postTemplate,
-              context: {
-                slug,
-                prev,
-                next,
-              },
+          routes.routesArray.filter((route) => route.template).map((route) => {
+            const edges = items.filter(item => item.node.fields.source === route.path);
+            edges.forEach((edge, index) => {
+              createPage({
+                path: `${edge.node.fields.source}${edge.node.fields.slug}`,
+                component: route.template,
+                context: route.context ? route.context(edge, index, edges) : {},
+              });
             });
-          });
-
-          // create pages
-          const pages = items.filter(item => item.node.fields.source === 'pages');
-          pages.forEach(({ node }) => {
-            const slug = node.fields.slug;
-            const source = node.fields.source;
-
-            createPage({
-              path: slug,
-              component: pageTemplate,
-              context: {
-                slug,
-                source,
-              },
-            });
-          });
+          })
         })
     );
   });

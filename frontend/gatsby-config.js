@@ -1,5 +1,6 @@
 require('dotenv').config();
 const config = require('./src/content/meta/config');
+const routes = require('./src/content/meta/routes');
 
 module.exports = {
   siteMetadata: {
@@ -8,34 +9,15 @@ module.exports = {
     description: config.siteDescription,
   },
   plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `parts`,
-        path: `${__dirname}/src/content/parts/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `posts`,
-        path: `${__dirname}/src/content/posts/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/content/pages/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `projects`,
-        path: `${__dirname}/src/content/projects/`,
-      },
-    },
+    ...routes.routesArray.map((route) => {
+      return ({
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: route.path,
+          path: `${__dirname}/src/content/${route.path}/`,
+        },
+      })
+    }),
     `gatsby-plugin-postcss`,
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-catch-links`,
@@ -108,8 +90,8 @@ module.exports = {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  url: `${site.siteMetadata.siteUrl}/${edge.node.fields.source}${edge.node.fields.slug}`,
+                  guid: `${site.siteMetadata.siteUrl}/${edge.node.fields.source}${edge.node.fields.slug}`,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
                 });
               });
@@ -128,6 +110,7 @@ module.exports = {
                       fields {
                         slug
                         prefix
+                        source
                       }
                       frontmatter {
                         title
