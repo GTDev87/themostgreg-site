@@ -39,6 +39,8 @@
     "gatsby-source-filesystem": "2.0.1",
     "gatsby-transformer-remark": "2.1.1",
     "gatsby-transformer-sharp": "2.1.1",
+    "glhd-tailwindcss-transitions": "^0.3.0",
+    "polished": "^2.3.1",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.1",
@@ -50,8 +52,7 @@
     "react-helmet": "^5.2.0",
     "react-waypoint": "^8.1.0",
     "reason-apollo": "^0.14.1",
-    "reason-react": "0.4.2",
-    "glhd-tailwindcss-transitions": "^0.3.0"
+    "reason-react": "0.4.2"
   },
   "devDependencies": {
     "@babel/preset-flow": "^7.0.0-rc.1",

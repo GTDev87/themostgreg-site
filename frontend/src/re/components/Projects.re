@@ -1,6 +1,7 @@
 let component = ReasonReact.statelessComponent("Projects");
 
 let css = Css.css;
+let cx = Css.cx;
 let tw = Css.tw;
 
 let projectsClass = [%bs.raw {| css(tw`
@@ -9,7 +10,9 @@ let projectsClass = [%bs.raw {| css(tw`
 `)
 |}];
 
-let projectsContainerClass = [%bs.raw
+let polishedClass = Utils.Transitions.polishTransitionStyle("opacity 1.0s ease-in 0s");
+
+let projectsContainerClassBase = [%bs.raw
   {| css(tw`
     pt-8
     w-full
@@ -20,6 +23,8 @@ let projectsContainerClass = [%bs.raw
   `)
   |}
 ];
+
+let projectsContainerClass = cx(projectsContainerClassBase, polishedClass);
 
 let projectCoverImageClass = [%bs.raw
   {| css(tw`
@@ -50,22 +55,26 @@ let make = (~projects, ~selectProject, _children) => {
   render: _self =>
     <div className=projectsClass>
       <Section title="Projects">
-        <div key="projects" className=projectsContainerClass>
-          {
-            projects
-            |> Belt.Array.map(_, edge =>
-                 <div
-                   key=edge##node##id
-                   className=projectCoverImageClass
-                   onClick={_e => selectProject(edge##node##id)}>
-                   <div className=projectCoverInternalImageClass>
-                    <ProjectCover project=edge />
-                   </div>
-                 </div>
-               )
-            |> ReasonReact.array
-          }
-        </div>
+        <WaypointGenerator wayKey="projects">
+          ...{(~waypointEntered) => {
+            <div key="projects" className=(cx(projectsContainerClass, Utils.Transitions.classTransitionIn(waypointEntered)))>
+              {
+                projects
+                |> Belt.Array.map(_, edge =>
+                    <div
+                      key=edge##node##id
+                      className=projectCoverImageClass
+                      onClick={_e => selectProject(edge##node##id)}>
+                      <div className=projectCoverInternalImageClass>
+                        <ProjectCover project=edge />
+                      </div>
+                    </div>
+                  )
+                |> ReasonReact.array
+              }
+            </div>
+          }}
+        </WaypointGenerator>
       </Section>
     </div>,
 };

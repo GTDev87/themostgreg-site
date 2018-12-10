@@ -10,11 +10,14 @@ let attributesClass = [%bs.raw {| css(tw`
 `)
 |}];
 
-let barsClass = [%bs.raw {| css(tw`
+let baseBarsClass = [%bs.raw {| css(tw`
   self-center
   w-full
 `)
 |}];
+
+let polishedClass = Utils.Transitions.polishTransitionStyle("opacity 1.0s ease-in 0s");
+let barsClass = cx(baseBarsClass, polishedClass);
 
 let attributesAttributeClass = [%bs.raw {| css(tw`
   mb-6
@@ -35,21 +38,13 @@ let attributes: attributes = [
   {label: "Bouldering", percentage: 70.},
 ];
 
-let classTransitionIn = (waypointEntered, className) => {
-  let hiddenOpacity = [%bs.raw {| css(tw` opacity-0 `)|}];
-
-  waypointEntered ? className : hiddenOpacity;
-};
-
-let circleInfoTransitionInClasses = "transition transition-timing-ease-in transition-slower";
-
 let make = _children => {
   ...component,
   render: _self =>
     <div className=attributesClass>
       <WaypointGenerator wayKey="attributes">
         ...{(~waypointEntered) => {
-          <div className=(barsClass  ++ " " ++ classTransitionIn(waypointEntered, circleInfoTransitionInClasses))>
+          <div className=(cx(barsClass, Utils.Transitions.classTransitionIn(waypointEntered)))>
             {
               attributes
               |> Belt.List.map(_, (attribute: Attribute.attribute) =>

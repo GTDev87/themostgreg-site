@@ -8,6 +8,18 @@ type sizes =
   | MD
   | LG;
 
+let polishedClass = Utils.Transitions.polishTransitionStyle("opacity 1.0s ease-in 0s");
+
+let baseCircleInfoClass = [%bs.raw {| css(tw`
+  flex
+  justify-center
+  flex-col
+  m-8
+  text-center
+`)|}];
+
+let circleInfoClass = cx(baseCircleInfoClass, polishedClass);
+
 let iconCircleClass = size =>
   switch (size) {
   | MD =>
@@ -37,15 +49,6 @@ let iconCircleClass = size =>
     |}
   };
 
-let circleInfoClass = [%bs.raw {| css(tw`
-  flex
-  justify-center
-  flex-col
-  m-8
-  text-center
-`)|}
-];
-
 let labelClass = [%bs.raw
   {| css(tw`
   flex
@@ -63,22 +66,12 @@ let centerWrapper = [%bs.raw {| css(tw`
 `)
 |}];
 
-let hiddenOpacity = [%bs.raw {| css(tw` opacity-0 `)|}];
-
-let classTransitionIn = (waypointEntered, className) => {
-  let hiddenOpacity = [%bs.raw {| css(tw` opacity-0 `)|}];
-
-  waypointEntered ? className : hiddenOpacity;
-};
-
-let circleInfoTransitionInClasses = "transition transition-timing-ease-in transition-slower";
-
 let make = (~size=MD, ~comp, ~label, ~copy, _children) => {
   ...component,
   render: _self =>
     <WaypointGenerator wayKey=label>
       ...{(~waypointEntered) => {
-        <div className=(circleInfoClass ++ " " ++ classTransitionIn(waypointEntered, circleInfoTransitionInClasses))>
+        <div className=(cx(circleInfoClass, Utils.Transitions.classTransitionIn(waypointEntered)))>
           <div>
             <div className=centerWrapper>
               <div className={iconCircleClass(size)}> comp </div>
