@@ -2,7 +2,7 @@
 title: Emmanuel Baptist Church
 ---
 
-import CTA from '../../../lib/es6_global/src/re/components/CTA.bs.js';
+import CTA from '../../../../lib/es6_global/src/re/components/CTA.bs.js';
 
 
 <CTA text={"hello"}/>

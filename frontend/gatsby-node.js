@@ -26,7 +26,7 @@ exports.onCreateBabelConfig = ({ actions: { setBabelPlugin } }) => {
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `Mdx`) {
     const fileNode = getNode(node.parent);
     const filePath = createFilePath({ node, getNode });
 
@@ -79,7 +79,7 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(`
         {
-          allMarkdownRemark(
+          allMdx(
             filter: { fields: { slug: { ne: null } } }
             sort: { fields: [fields___prefix], order: DESC }
             limit: 1000
@@ -106,7 +106,7 @@ exports.createPages = ({ graphql, actions }) => {
             reject(result.errors);
           }
 
-          const items = result.data.allMarkdownRemark.edges;
+          const items = result.data.allMdx.edges;
           const categorySet = new Set();
 
           // Create category list
@@ -142,10 +142,10 @@ exports.createPages = ({ graphql, actions }) => {
               createPage({
                 path: `${edge.node.fields.source}${edge.node.fields.slug}`,
                 component: route.template,
-                // componentWithMDXScope(
-                //   route.template,
-                //   node.code.scope
-                // ),
+                  // componentWithMDXScope(
+                  //   route.template,
+                  //   edge.node.code.scope
+                  // ),
                 context: route.context ? route.context(edge, index, edges) : {},
               });
             });

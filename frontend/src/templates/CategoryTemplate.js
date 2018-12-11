@@ -10,7 +10,7 @@ export default (props) => <MDXPage props={props} />;
 
 export const query = graphql`
   query CategoryTemplateQuery($category: String!) {
-    posts: allMarkdownRemark(
+    posts: allMdx(
       limit: 1000
       sort: { fields: [fields___prefix], order: DESC }
       filter: { frontmatter: { categories: { eq: $category } } }
@@ -30,12 +30,12 @@ export const query = graphql`
         }
       }
     }
-    footerLinks: markdownRemark(
+    footerLinks: mdx(
       fileAbsolutePath: { regex: "/content/parts/footerLinks/" }
     ) {
       html
     }
-    copyright: markdownRemark(
+    copyright: mdx(
       fileAbsolutePath: { regex: "/content/parts/copyright/" }
     ) {
       html

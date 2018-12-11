@@ -7,17 +7,17 @@ export default (props) => <Page404 props={props} />;
 
 export const query = graphql`
   query {
-    notFound: markdownRemark(
+    notFound: mdx(
       fileAbsolutePath: { regex: "/content/parts/notFound/" }
     ) {
       html
     }
-    footerLinks: markdownRemark(
+    footerLinks: mdx(
       fileAbsolutePath: { regex: "/content/parts/footerLinks/" }
     ) {
       html
     }
-    copyright: markdownRemark(
+    copyright: mdx(
       fileAbsolutePath: { regex: "/content/parts/copyright/" }
     ) {
       html

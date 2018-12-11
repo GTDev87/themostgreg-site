@@ -7,7 +7,7 @@ export default (props) => <PageBlog props={props} />;
 
 export const query = graphql`
   query {
-    posts: allMarkdownRemark(
+    posts: allMdx(
       filter: { fields: { source: { eq: "posts" }, slug: { ne: null } } }
       sort: { fields: [fields___prefix], order: DESC }
     ) {
@@ -26,12 +26,12 @@ export const query = graphql`
         }
       }
     }
-    footerLinks: markdownRemark(
+    footerLinks: mdx(
       fileAbsolutePath: { regex: "/content/parts/footerLinks/" }
     ) {
       html
     }
-    copyright: markdownRemark(
+    copyright: mdx(
       fileAbsolutePath: { regex: "/content/parts/copyright/" }
     ) {
       html

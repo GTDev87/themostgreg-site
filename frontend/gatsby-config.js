@@ -2,6 +2,55 @@ require('dotenv').config();
 const config = require('./src/content/meta/config');
 const routes = require('./src/content/meta/routes');
 
+const subRemarkPlugins = [
+  {
+    resolve: 'gatsby-remark-images',
+    options: {
+      maxWidth: 690,
+      linkImagesToOriginal: false,
+    },
+  },
+  {
+    resolve: `gatsby-remark-prismjs`,
+  },
+  {
+    resolve: `gatsby-remark-responsive-iframe`,
+  },
+  {
+    resolve: `gatsby-remark-copy-linked-files`,
+  },
+  {
+    resolve: `gatsby-remark-smartypants`,
+  },
+  {
+    resolve: 'gatsby-remark-emojis',
+    options: {
+      // Deactivate the plugin globally (default: true)
+      active: true,
+      // Add a custom css class
+      class: 'emoji-icon',
+      // Select the size (available size: 16, 24, 32, 64)
+      size: 64,
+      // Add custom styles
+      styles: {
+        display: 'inline',
+        margin: '0',
+        'margin-top': '1px',
+        position: 'relative',
+        top: '5px',
+        width: '25px',
+      },
+    },
+  },
+];
+
+let transformerRemarkPlugin = {
+  resolve: `gatsby-transformer-remark`,
+  options: {
+    plugins: subRemarkPlugins
+  },
+};
+
 module.exports = {
   siteMetadata: {
     title: config.siteTitle,
@@ -21,7 +70,8 @@ module.exports = {
     {
       resolve: `gatsby-mdx`,
       options: {
-        extensions: [".mdx", ".md"]
+        extensions: [".mdx", ".md"],
+        gatsbyRemarkPlugins: subRemarkPlugins,
       }
     },
     `gatsby-plugin-postcss`,
@@ -29,44 +79,7 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 690,
-              linkImagesToOriginal: false,
-            },
-          },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-responsive-iframe`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-          {
-            resolve: 'gatsby-remark-emojis',
-            options: {
-              // Deactivate the plugin globally (default: true)
-              active: true,
-              // Add a custom css class
-              class: 'emoji-icon',
-              // Select the size (available size: 16, 24, 32, 64)
-              size: 64,
-              // Add custom styles
-              styles: {
-                display: 'inline',
-                margin: '0',
-                'margin-top': '1px',
-                position: 'relative',
-                top: '5px',
-                width: '25px',
-              },
-            },
-          },
-        ],
-      },
-    },
+    transformerRemarkPlugin,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -92,8 +105,8 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   url: `${site.siteMetadata.siteUrl}/${edge.node.fields.source}${edge.node.fields.slug}`,
@@ -104,15 +117,15 @@ module.exports = {
             },
             query: `
               {
-                allMarkdownRemark(
+                allMdx(
                   limit: 1000,
                   sort: { order: DESC, fields: [fields___prefix] },
                   filter: { fields: { source: {eq: "posts"}, slug: { ne: null } } }
                 ) {
                   edges {
                     node {
-                      excerpt
                       html
+                      excerpt
                       fields {
                         slug
                         prefix

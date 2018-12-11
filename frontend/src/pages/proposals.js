@@ -7,7 +7,7 @@ export default (props) => <Index props={props} />;
 
 export const query = graphql`
   query {
-    projects: allMarkdownRemark(filter: {fields: {source: {eq: "proposals"}, slug: {ne: null}}}) {
+    projects: allMdx(filter: {fields: {source: {eq: "proposals"}, slug: {ne: null}}}) {
       edges {
         node {
           id
@@ -30,12 +30,12 @@ export const query = graphql`
         }
       }
     }
-    footerLinks: markdownRemark(
+    footerLinks: mdx(
       fileAbsolutePath: { regex: "/content/parts/footerLinks/" }
     ) {
       html
     }
-    copyright: markdownRemark(
+    copyright: mdx(
       fileAbsolutePath: { regex: "/content/parts/copyright/" }
     ) {
       html

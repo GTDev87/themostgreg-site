@@ -10,7 +10,7 @@ export default (props) => <MDXPage props={props} />;
 
 export const query = graphql`
   query PageTemplateQuery($slug: String!) {
-    page: markdownRemark(fields: { slug: { eq: $slug } }) {
+    page: mdx(fields: { slug: { eq: $slug } }) {
       html
       excerpt
       fileAbsolutePath
@@ -23,12 +23,12 @@ export const query = graphql`
         categories
       }
     }
-    footerLinks: markdownRemark(
+    footerLinks: mdx(
       fileAbsolutePath: { regex: "/content/parts/footerLinks/" }
     ) {
       html
     }
-    copyright: markdownRemark(
+    copyright: mdx(
       fileAbsolutePath: { regex: "/content/parts/copyright/" }
     ) {
       html
