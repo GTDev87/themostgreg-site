@@ -2,16 +2,23 @@ import { graphql } from 'gatsby';
 import React from 'react';
 
 import Page from '../../lib/es6_global/src/re/template/Template_Post.bs.js';
-import { withMDXScope } from "gatsby-mdx/context";
 
-const MDXPage = withMDXScope(Page);
+export default (props) => {
+  console.log("Page = ", Page)
+  console.log("props = ", props)
+  return <Page props={props} />
+};
 
-export default (props) => <MDXPage props={props} />;
+/* TODO MDX can't use named queries https://github.com/ChristopherBiscardi/gatsby-mdx/issues/202 */
 
-export const query = graphql`
-  query PostTemplateQuery($slug: String!) {
+export const pageQuery = graphql`
+  query($slug: String!) {
     post: mdx(fields: { slug: { eq: $slug } }) {
       html
+      code {
+        scope
+        body
+      }
       fileAbsolutePath
       excerpt
       fields {
@@ -27,16 +34,28 @@ export const query = graphql`
       fileAbsolutePath: { regex: "/content/parts/author/" }
     ) {
       html
+      code {
+        scope
+        body
+      }
     }
     footerLinks: mdx(
       fileAbsolutePath: { regex: "/content/parts/footerLinks/" }
     ) {
       html
+      code {
+        scope
+        body
+      }
     }
     copyright: mdx(
       fileAbsolutePath: { regex: "/content/parts/copyright/" }
     ) {
       html
+      code {
+        scope
+        body
+      }
     }
   }
 `;

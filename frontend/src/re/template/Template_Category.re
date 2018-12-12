@@ -1,4 +1,4 @@
-let component = ReasonReact.statelessComponent("Page_Index");
+let component = ReasonReact.statelessComponent("Template_Category");
 
 [%bs.raw {|require('../../../../../src/styles/styles.css')|}];
 [%bs.raw {|require('prismjs/themes/prism-okaidia.css')|}];
@@ -7,7 +7,9 @@ let component = ReasonReact.statelessComponent("Page_Index");
 
 let make = (~props: PagePropType.props, _children) => {
   ...component,
-  render: _self =>
+  render: _self => {
+    Js.log("Page_Category props = ");
+    Js.log(props);
     <div>
       <Menu />
       <Article>
@@ -66,7 +68,8 @@ let make = (~props: PagePropType.props, _children) => {
         }
         description=Config.config##siteDescription
       />
-    </div>,
+    </div>
+  }
 };
 
 let default =

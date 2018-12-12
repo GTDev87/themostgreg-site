@@ -86,6 +86,11 @@ exports.createPages = ({ graphql, actions }) => {
           ) {
             edges {
               node {
+                code {
+                  scope
+                  body
+                }
+          
                 fileAbsolutePath
                 fields {
                   slug
@@ -129,7 +134,11 @@ exports.createPages = ({ graphql, actions }) => {
           categoryList.forEach(category => {
             createPage({
               path: `/categories/${_.kebabCase(category)}/`,
-              component: categoryTemplate,
+              component:
+                componentWithMDXScope(
+                  categoryTemplate,
+                  undefined /* TODO ?????? category .MD? */
+                ),
               context: {
                 category,
               },
@@ -138,15 +147,20 @@ exports.createPages = ({ graphql, actions }) => {
 
           routes.routesArray.filter((route) => route.template).map((route) => {
             const edges = items.filter(item => item.node.fields.source === route.path);
+            console.log("route = %j", route);
+            console.log(route);
             edges.forEach((edge, index) => {
               createPage({
                 path: `${edge.node.fields.source}${edge.node.fields.slug}`,
-                component: route.template,
-                  // componentWithMDXScope(
-                  //   route.template,
-                  //   edge.node.code.scope
-                  // ),
-                context: route.context ? route.context(edge, index, edges) : {},
+                component:
+                  componentWithMDXScope(
+                    route.template,
+                    edge.node.code.scope
+                  ),
+                context: {
+                  id: edge.node.id,
+                  ...(route.context ? route.context(edge, index, edges) : {})
+                },
               });
             });
           })

@@ -124,6 +124,10 @@ module.exports = {
                 ) {
                   edges {
                     node {
+                      code {
+                        scope
+                        body
+                      }
                       html
                       excerpt
                       fields {

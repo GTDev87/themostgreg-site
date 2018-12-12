@@ -12,7 +12,7 @@ let layoutClass = [%bs.raw {| css(tw`my-0 text-xl leading-tight bg-blue`) |}];
 let make = (~props: PagePropType.props, _children) => {
   ...component,
   render: _self => {
-    Js.log("props");
+    Js.log("Template_Proposal props");
     Js.log(props);
     <div>
       <Article>

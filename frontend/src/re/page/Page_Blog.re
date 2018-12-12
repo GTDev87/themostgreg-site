@@ -1,6 +1,7 @@
 let component = ReasonReact.statelessComponent("Page_Blog");
 [%bs.raw {|require('../../../../../src/styles/styles.css')|}];
 
+/* TODO this needs to be fixed with proper links */
 let make = (~props: PagePropType.props, _children) => {
   ...component,
   render: _self =>

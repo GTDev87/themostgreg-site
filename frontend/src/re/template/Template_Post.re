@@ -10,6 +10,8 @@ let nextPrevIcons = {"next": NextIcon.comp, "prev": PrevIcon.comp};
 let make = (~props: PagePropType.props, _children) => {
   ...component,
   render: _self => {
+    Js.log("Template_Post props = ");
+    Js.log(props);
     let url = Config.config##siteUrl ++ props##data##post##fields##slug;
     let shareBlockProps = {
       "url": url,
