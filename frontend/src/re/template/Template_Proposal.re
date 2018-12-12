@@ -17,7 +17,7 @@ let make = (~props: PagePropType.props, _children) => {
     <div>
       <Article>
         <Heading title=props##data##page##frontmatter##title />
-        <Bodytext html_=props##data##page##html />
+        <MDXRenderer> {props##data##page##code##body} </MDXRenderer>
       </Article>
     </div>
   }

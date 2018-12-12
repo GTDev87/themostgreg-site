@@ -13,10 +13,17 @@ type fieldType = {
   "slug": string,
   "prefix": string,
 };
+
+type codeType = {
+  .
+  "body": ReasonReact.reactElement,
+};
+
 type htmlType = {
   .
   "id": string,
   "html": string,
+  "code": codeType,
   "frontmatter": frontmatterType,
   "fields": fieldType,
   "excerpt": string,
