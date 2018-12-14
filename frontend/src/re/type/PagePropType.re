@@ -27,6 +27,7 @@ type htmlType = {
   "frontmatter": frontmatterType,
   "fields": fieldType,
   "excerpt": string,
+  "rawBody": string,
 };
 
 type nodeType = {

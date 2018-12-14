@@ -124,6 +124,7 @@ module.exports = {
                 ) {
                   edges {
                     node {
+                      rawBody
                       code {
                         scope
                         body

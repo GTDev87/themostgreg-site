@@ -3,11 +3,7 @@ import React from 'react';
 
 import Page from '../../lib/es6_global/src/re/template/Template_Category.bs.js';
 
-export default (props) => {
-  console.log("Page = ", Page)
-  console.log("props = ", props)
-  return <Page props={props} />
-};
+export default (props) => <Page props={props} />;
 
 /* TODO MDX can't use named queries https://github.com/ChristopherBiscardi/gatsby-mdx/issues/202 */
 
@@ -28,6 +24,7 @@ export const pageQuery = graphql`
             scope
             body
           }
+          rawBody
           excerpt
           timeToRead
           frontmatter {
@@ -45,6 +42,7 @@ export const pageQuery = graphql`
         scope
         body
       }
+      rawBody
     }
     copyright: mdx(
       fileAbsolutePath: { regex: "/content/parts/copyright/" }
@@ -54,6 +52,7 @@ export const pageQuery = graphql`
         scope
         body
       }
+      rawBody
     }
   }
 `;

@@ -73,10 +73,9 @@ Get back to me with a yes/no if you would like further information or if you wou
 
 - I am a developer with 7 years of experience in frontend, backend, website developer, machine learning.
 - I've worked everywhere from small companies (Mashwork 12 people) medium sized companies and large companies (Microsoft).
-- I've written in over 5 languages professionally.
 - I've seen how people interact in organization and how to make things run clenaly.
 - I come with a lot of energy and I'm excited to see my clients succeed.
 
 ## Thanks!
 
-Your church has done a lot for my family.  I respect all of you greatly.  Get back to me soon!
+Thank you very much for your time.  Get back to me soon!

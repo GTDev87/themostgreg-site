@@ -26,7 +26,7 @@ exports.onCreateBabelConfig = ({ actions: { setBabelPlugin } }) => {
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
-  if (node.internal.type === `Mdx`) {
+  if (node.internal.type === `MarkdownRemark` || node.internal.type === `Mdx`) {
     const fileNode = getNode(node.parent);
     const filePath = createFilePath({ node, getNode });
 
@@ -86,6 +86,7 @@ exports.createPages = ({ graphql, actions }) => {
           ) {
             edges {
               node {
+                rawBody
                 code {
                   scope
                   body
@@ -147,16 +148,11 @@ exports.createPages = ({ graphql, actions }) => {
 
           routes.routesArray.filter((route) => route.template).map((route) => {
             const edges = items.filter(item => item.node.fields.source === route.path);
-            console.log("route = %j", route);
-            console.log(route);
             edges.forEach((edge, index) => {
               createPage({
                 path: `${edge.node.fields.source}${edge.node.fields.slug}`,
                 component:
-                  componentWithMDXScope(
-                    route.template,
-                    edge.node.code.scope
-                  ),
+                  componentWithMDXScope(route.template, edge.node.code.scope),
                 context: {
                   id: edge.node.id,
                   ...(route.context ? route.context(edge, index, edges) : {})
