@@ -1,20 +1,27 @@
 ---
 title: Emmanuel Baptist Church
 ---
+<!--
 
 ## Table of Contents
 
 [WHY](#why)<br/>
 [NEED](#needs-problems)<br/>
 [GOALS](#goals-objectives)<br/>
-[STEPS](#steps)<br/><!-- [TIMETABLE](#time-table)\ -->
-[BUDGET](#budget)<br/><!-- [KEY PERSONNEL](#key-pesonnel)\ -->
+[STEPS](#steps)<br/>
+[BUDGET](#budget)<br/>
 [NEXT STEPS](#next-steps)<br/>
 [ABOUT GREG](#about-me)<br/>
+
+-->
+
+# Emmanuel Baptist Church
 
 ---
 
 ## WHY?
+
+<button></button>
 
 ---
 
@@ -80,9 +87,24 @@ I recommend:
 
 From what I've seen I see two possibilities where I can help the Emamanuel baptist church:
 
-1. I can help by cleaning up the site by removing dead links and keeping data consistent across the site.  This requires just managing the wordpress site and keeping data up to date.  Also cleaning up pastor's blog.  Also adding google analytics to see how the congregation uses the site to see which pages are useful and which pages need help.  With this option I can do work on the the current architecture but it will be more work (if even possible) to change interactions on the site.
+---
 
-2. A full redo of the website.  This will give you and your designer the ability to redo the site in their image.  I am able to reconstruct the site from scratch.  I will still give you a panel to upload content via wordpress or netlify.   I will help with any issues with user flow and organization of data.
+Option 1: I can clean up your existing wordpress site which involves:
+
+- removing dead links
+- This requires just managing the wordpress content and keeping it up to date.  
+- Also cleaning up pastor's blog.
+- Also adding google analytics to see how the congregation uses the site to see which pages are useful and which pages need help.  
+
+With this option I can do work on the the current architecture but it will be more work (if even possible) to change interactions on the site.
+
+---
+
+Option 2: I can redo of the website.
+
+- With this option, I will work with your designer redo the site in your image.
+- I will still give you a panel to upload content via wordpress or netlify.
+- I will help with any issues with user flow and organization of data.
 
 ---
 

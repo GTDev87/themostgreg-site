@@ -59,11 +59,12 @@ module.exports = {
   },
   plugins: [
     ...routes.routesArray.map((route) => {
+      const contentPath = route.dir || route.path;
       return ({
         resolve: `gatsby-source-filesystem`,
         options: {
-          name: route.path,
-          path: `${__dirname}/src/content/${route.path}/`,
+          name: route.dir,
+          path: `${__dirname}/src/content/${contentPath}/`,
         },
       })
     }),
@@ -129,6 +130,7 @@ module.exports = {
                         scope
                         body
                       }
+                      tableOfContents
                       html
                       excerpt
                       fields {

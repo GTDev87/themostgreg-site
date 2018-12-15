@@ -24,6 +24,7 @@ export const pageQuery = graphql`
             scope
             body
           }
+          tableOfContents
           rawBody
           excerpt
           timeToRead
@@ -42,6 +43,7 @@ export const pageQuery = graphql`
         scope
         body
       }
+      tableOfContents
       rawBody
     }
     copyright: mdx(
@@ -52,6 +54,7 @@ export const pageQuery = graphql`
         scope
         body
       }
+      tableOfContents
       rawBody
     }
   }

@@ -91,7 +91,7 @@ exports.createPages = ({ graphql, actions }) => {
                   scope
                   body
                 }
-          
+                tableOfContents
                 fileAbsolutePath
                 fields {
                   slug
@@ -147,10 +147,17 @@ exports.createPages = ({ graphql, actions }) => {
           });
 
           routes.routesArray.filter((route) => route.template).map((route) => {
-            const edges = items.filter(item => item.node.fields.source === route.path);
+            const srcPath = route.dir || route.path;
+            const edges = items.filter(item => item.node.fields.source === (srcPath));
+
+            console.log("items.map((edge) => edge.node.fields.source) = %j", items.map((edge) => edge.node.fields.source));
+            console.log("edges.map((edge) => edge.node.fields.source) = %j", edges.map((edge) => edge.node.fields.source));
+            console.log("route.dir = %j", route.dir);
+            console.log("route.path = %j", route.path);
+            console.log("srcPath = %j", srcPath);
             edges.forEach((edge, index) => {
               createPage({
-                path: `${edge.node.fields.source}${edge.node.fields.slug}`,
+                path: `${route.path}${edge.node.fields.slug}`,
                 component:
                   componentWithMDXScope(route.template, edge.node.code.scope),
                 context: {

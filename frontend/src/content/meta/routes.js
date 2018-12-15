@@ -3,9 +3,12 @@ const path = require('path');
 const postTemplate = path.resolve('./src/templates/PostTemplate.js');
 const pageTemplate = path.resolve('./src/templates/PageTemplate.js');
 const proposalTemplate = path.resolve('./src/templates/ProposalTemplate.js');
+const slidesTemplate = path.resolve('./src/templates/SlidesTemplate.js');
 
 const routesArray = [
-  {path: "parts"},
+  {
+    path: "parts"
+  },
   {
     path: "posts",
     template: postTemplate,
@@ -35,6 +38,20 @@ const routesArray = [
   },
   {path: "projects"},
   {
+    dir: "proposals",
+    path: "slides",
+    template: slidesTemplate,
+    context: (edge) => {
+      const slug = edge.node.fields.slug;
+      const source = edge.node.fields.source;
+      return {
+        slug,
+        source,
+      };
+    },
+  },
+  {
+    dir: "proposals",
     path: "proposals",
     template: proposalTemplate,
     context: (edge) => {

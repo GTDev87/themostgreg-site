@@ -15,6 +15,7 @@ export const pageQuery = graphql`
         scope
         body
       }
+      tableOfContents
       rawBody
       excerpt
       fileAbsolutePath
@@ -36,6 +37,7 @@ export const pageQuery = graphql`
         scope
         body
       }
+      tableOfContents
     }
     copyright: mdx(
       fileAbsolutePath: { regex: "/content/parts/copyright/" }
@@ -46,6 +48,7 @@ export const pageQuery = graphql`
         scope
         body
       }
+      tableOfContents
     }
   }
 `;

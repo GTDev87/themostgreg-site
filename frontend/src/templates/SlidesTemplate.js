@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
-import Page from '../../lib/es6_global/src/re/template/Template_Proposal.bs.js';
+import Page from '../../lib/es6_global/src/re/template/Template_Slides.bs.js';
 
 export default (props) => <Page props={props} />;
 

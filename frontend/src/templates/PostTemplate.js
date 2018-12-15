@@ -16,6 +16,7 @@ export const pageQuery = graphql`
         scope
         body
       }
+      tableOfContents
       fileAbsolutePath
       excerpt
       fields {
@@ -36,6 +37,7 @@ export const pageQuery = graphql`
         scope
         body
       }
+      tableOfContents
     }
     footerLinks: mdx(
       fileAbsolutePath: { regex: "/content/parts/footerLinks/" }
@@ -46,6 +48,7 @@ export const pageQuery = graphql`
         scope
         body
       }
+      tableOfContents
     }
     copyright: mdx(
       fileAbsolutePath: { regex: "/content/parts/copyright/" }
@@ -56,6 +59,7 @@ export const pageQuery = graphql`
         scope
         body
       }
+      tableOfContents
     }
   }
 `;
