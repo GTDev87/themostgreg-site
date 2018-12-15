@@ -14,6 +14,9 @@ let layoutClass = [%bs.raw {| css(tw`my-0 text-xl leading-tight bg-blue`) |}];
 let make = (~props: PagePropType.props, _children) => {
   ...component,
   render: _self => {
+    Js.log("props##data##page = %j");
+    Js.log(props##data##page);
+
     <div>
       <Article>
         <Heading title=props##data##page##frontmatter##title />
@@ -28,7 +31,6 @@ let make = (~props: PagePropType.props, _children) => {
         >
           {props##data##page##code##body}
         </MDXRenderer>
-        
       </Article>
       <div>
       </div>

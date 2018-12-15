@@ -1,39 +1,48 @@
 ---
 title: Emmanuel Baptist Church
 ---
-<!--
-
-## Table of Contents
-
-[WHY](#why)<br/>
-[NEED](#needs-problems)<br/>
-[GOALS](#goals-objectives)<br/>
-[STEPS](#steps)<br/>
-[BUDGET](#budget)<br/>
-[NEXT STEPS](#next-steps)<br/>
-[ABOUT GREG](#about-me)<br/>
-
--->
 
 # Emmanuel Baptist Church
 
----
-
-## WHY?
-
-<button></button>
+![Google](https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Emmanuel_Baptist_SE_sun_jeh.jpg/1200px-Emmanuel_Baptist_SE_sun_jeh.jpg)
 
 ---
 
-### WHY HAVE A WEBSITE?
-
-Websites are your face to your online audience, which nowadays is most of your audience.  They are not only vehicles for people to show what you do but also give people knowledge for how to interact with your serivices.  It is in your best interest to have a site which shows your message and communicates what you offer in a clear, concise and quick manner. 
+### Proposal for website services
 
 ---
 
-### Why is this important the Emanuel Baptist Church?
+## WHY HAVE A WEBSITE?
 
-A strong site:
+---
+
+#### Websites are your face to your online audience.
+
+![unsplash.com](https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
+
+---
+
+#### Websites
+
+- are vehicles for people to show what you do
+- give people knowledge for how to interact with your serivices
+
+---
+
+#### It is in your best interest to have a site which
+
+- shows your message 
+- communicates what you offer
+  - clearly
+  - concisely
+  - quickly. 
+
+---
+
+### Why for EBC?
+
+#### A strong site:
+
 - Would show what you are offing your community
 - It will show people your values.
 - Allow your members to support you and each other.
@@ -41,7 +50,8 @@ A strong site:
 
 ---
 
-It could:
+#### It could:
+
 - Show your value to your congregation by engaging them.
 - Direct them important functions and events.
 - Evangelize through imporant works you have done.
@@ -53,11 +63,31 @@ It could:
 
 ---
 
-I have looked over your website, and I have found that while it is a very beautiful interactive website, it is hard to find meaningful information about services.  Service times should be on the front page easily found.  Your 4Gs motto/tennants are buried in the page and difficult to find.  Also, there are some pages that lead to empty information that could lead your memebers and people new to the site to leave.
+#### I have looked over your website
+
+![unsplash.com](https://images.unsplash.com/photo-1516382799247-87df95d790b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80)
 
 ---
 
-I recommend: 
+#### I have found (pros): 
+
+- it is a very interactive website
+- it is strongly designed full of bright colors
+- displays current events readily on the home page
+
+---
+
+#### I have found (cons):
+
+- still it is hard to find meaningful information about services.
+- Service times should be on the front page easily found.
+- Your 4Gs motto/tennants are buried in the page and difficult to find.
+- There are some pages that lead to empty information.
+
+---
+
+#### I recommend: 
+
 - a cleaner interface for website and especially mobile
 - removal of dead links or pages that have no information
 - A quicker one page interface that displays relevant service times and church projects.
@@ -69,11 +99,22 @@ I recommend:
 
 ---
 
-I want your site to have a clean single page that displays all imporant information about services quickly.  It will direct the congregation to upcoming events and projects happening.  It will display the churches motto/beliefs on the front page in a quick an concise manner.  It will easily show the blog of the pastoral staff.
+#### I want your site to have a clean single page that displays all imporant information about services quickly.
+
+![unsplash.com](https://as1.ftcdn.net/jpg/00/69/02/14/500_F_69021405_4N6x5rfqo85wlky09HyaeAm9xDr5aklV.jpg)
 
 ---
 
-I recommend: 
+#### It will
+
+- direct the congregation to upcoming events and projects happening.
+- display the churches motto/beliefs on the front page in a quick an concise manner.
+- easily show the blog of the pastoral staff.
+
+---
+
+#### I recommend: 
+
 - Removing dead links on the site.  And pages that have no information.
 - Having an easier to understand calendar about upcoming events and services.
 - A blog where pastors can upload their content themselves.  
@@ -85,22 +126,24 @@ I recommend:
 
 ---
 
-From what I've seen I see two possibilities where I can help the Emamanuel baptist church:
+#### From what I've seen I see two possibilities where I can help the Emamanuel Baptist Church:
 
 ---
 
-Option 1: I can clean up your existing wordpress site which involves:
+#### Option 1: I can clean up your existing wordpress site which involves:
 
 - removing dead links
 - This requires just managing the wordpress content and keeping it up to date.  
 - Also cleaning up pastor's blog.
-- Also adding google analytics to see how the congregation uses the site to see which pages are useful and which pages need help.  
-
-With this option I can do work on the the current architecture but it will be more work (if even possible) to change interactions on the site.
+- Also adding google analytics to see how the congregation uses the site to see which pages are useful and which pages need help.    
+  
+  
+  
+#### With this option I can do work on the the current architecture but it will be more work (if even possible) to change interactions on the site.
 
 ---
 
-Option 2: I can redo of the website.
+#### Option 2: I can redo of the website.
 
 - With this option, I will work with your designer redo the site in your image.
 - I will still give you a panel to upload content via wordpress or netlify.
@@ -112,7 +155,22 @@ Option 2: I can redo of the website.
 
 ---
 
-While option 1 will be quicker in the short term, option 2 will only cost money up front and will cost only a maitainance fee afterwards and people in the congregation will easily be able to add events and blog posts to the site.  
+#### Comparison between option 1 and 2
+
+- Option 1 will be quicker in the short term
+- Option 2 will only cost more up front and will cost only a maitainance fee afterwards.  
+
+---
+
+| Features             | Option 1        | Option 2                     |
+| -------------------- |:---------------:| -----------------------------|
+| Custom Site          |                 |               x              |
+| Upload own Pages     |                 |               x              |
+| Clean up dead links  |       x         |               x              |
+| Analytics            |       x         |               x              |
+| Consistent Site Data |   When Noticed  |      Always and Automatic    |
+| Mobile Experience    | Same as current |      Responsive and Clean    |
+| Upload Events        |                 | Upload and pages will update |
 
 ---
 
@@ -120,13 +178,15 @@ While option 1 will be quicker in the short term, option 2 will only cost money 
 
 ---
 
-Get back to me with a yes/no if you would like further information or if you would like to learn more about my thoughts on what can help your congregation succeed.
+### Get back to me with a yes/no if you would like further information or if you would like to learn more about my thoughts on what can help your congregation succeed.
 
 ---
 
 ## ABOUT ME
 
 ---
+
+#### ABOUT ME
 
 - I am a developer with 7 years of experience in frontend, backend, website developer, machine learning.
 - I've worked everywhere from small companies (Mashwork 12 people) medium sized companies and large companies (Microsoft).
@@ -137,6 +197,4 @@ Get back to me with a yes/no if you would like further information or if you wou
 
 ## Thanks!
 
-Thank you very much for your time.  Get back to me soon!
-
----
+#### Thank you very much for your time.  Get back to me soon!

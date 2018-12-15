@@ -16,6 +16,8 @@ let make = (~props: PagePropType.props, _children) => {
   render: _self => {
     Js.log("props##data##page = ");
     Js.log(props##data##page);
+    let theme = SpectacleThemeNova.createTheme();
+
     let slides =
       (props##data##page##rawBody)
       |> Spectacle.markdownSlides
@@ -25,28 +27,7 @@ let make = (~props: PagePropType.props, _children) => {
       |> Belt.List.map(_, ((idx, value)) => value)
       |> Belt.List.toArray;
 
-    /* 
-    <div>
-      <Article>
-        <Heading title=props##data##page##frontmatter##title />
-        <MDXRenderer
-          components=({
-            ...defaultComponents,
-            h1: Some(H1.jsComponent),
-            h2: Some(H2.jsComponent),
-            h3: Some(H3.jsComponent),
-            p: Some(P.jsComponent),
-          })
-        >
-          {props##data##page##code##body}
-        </MDXRenderer>
-        
-      </Article>
-      <div>
-      </div>
-    </div>
-    */
-    <SpectacleDeck>
+    <SpectacleDeck theme>
       { slides |> ReasonReact.array }
     </SpectacleDeck>
   }

@@ -19,6 +19,13 @@ type codeType = {
   "body": ReasonReact.reactElement,
 };
 
+type contentType = {
+  .
+  "items": list(contentType),
+  "title": string,
+  "url": string,
+};
+
 type htmlType = {
   .
   "id": string,
@@ -28,6 +35,7 @@ type htmlType = {
   "fields": fieldType,
   "excerpt": string,
   "rawBody": string,
+  "tableOfContents": list(contentType),
 };
 
 type nodeType = {

@@ -1,10 +1,12 @@
 [@bs.module "spectacle"]
 external comp: ReasonReact.reactClass = "Deck";
 
-let make = (children: array(ReasonReact.reactElement)) => {
+let make = (~theme : option(Spectacle.theme)=? , children: array(ReasonReact.reactElement)) => {
   ReasonReact.wrapJsForReason(
     ~reactClass=comp,
-    ~props=Js.Obj.empty(),
+    ~props={
+      "theme": Js.Nullable.fromOption(theme)
+    },
     children,
   );
 };
