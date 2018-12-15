@@ -9,7 +9,7 @@ let css = Css.css;
 let tw = Css.tw;
 
 let defaultComponents = MDXRenderer.defaultComponents;
-let layoutClass = [%bs.raw {| css(tw`my-0 text-xl leading-tight bg-blue`) |}];
+let spectacleSlidesClass = [%bs.raw {| css('  ') |}];
 
 let make = (~props: PagePropType.props, _children) => {
   ...component,
@@ -18,7 +18,9 @@ let make = (~props: PagePropType.props, _children) => {
 
     /* Note skips first page for metadata */
     /* TODO use mdx rendering when gatsby-mdx uses mdx-deck */
-    <SpectacleSlides theme markdown=props##data##page##rawBody />
+    <div className=spectacleSlidesClass>
+      <SpectacleSlides theme markdown=props##data##page##rawBody />
+    </div>
   }
 };
 

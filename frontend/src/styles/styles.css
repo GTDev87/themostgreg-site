@@ -38,4 +38,8 @@ html, body {
   }
 }
 
+.spectacle-content {
+  transform: scale(0.6228571428571429) !important;
+}
+
 /* purgecss end ignore */
