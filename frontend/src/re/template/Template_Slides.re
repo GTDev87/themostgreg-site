@@ -17,6 +17,7 @@ let make = (~props: PagePropType.props, _children) => {
     let theme = SpectacleThemeNova.createTheme();
 
     /* Note skips first page for metadata */
+    /* TODO use mdx rendering when gatsby-mdx uses mdx-deck */
     <SpectacleSlides theme markdown=props##data##page##rawBody />
   }
 };

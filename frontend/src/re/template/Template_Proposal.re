@@ -16,6 +16,13 @@ let make = (~props: PagePropType.props, _children) => {
   render: _self => {
     <div>
       <Article>
+        <Bodytext html_=props##data##page##html />
+      </Article>
+    </div>
+
+    /* Clean up the MDX a bit later */
+    /* <div>
+      <Article>
         <Heading title=props##data##page##frontmatter##title />
         <MDXRenderer
           components=({
@@ -31,7 +38,7 @@ let make = (~props: PagePropType.props, _children) => {
       </Article>
       <div>
       </div>
-    </div>
+    </div> */
   }
 };
 

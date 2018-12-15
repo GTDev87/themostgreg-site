@@ -24,8 +24,10 @@ title: Emmanuel Baptist Church
 
 #### Websites
 
-- are vehicles for people to show what you do
-- give people knowledge for how to interact with your serivices
+- Are vehicles for people to show what you do
+- Give people knowledge for how to interact with your serivices
+- Simple sites seamlessly give you your information.
+- Complex sites take people time and can frustrate them into leaving.
 
 ---
 
@@ -79,10 +81,11 @@ title: Emmanuel Baptist Church
 
 #### I have found (cons):
 
-- still it is hard to find meaningful information about services.
+- Still it is hard to find meaningful information about services.
 - Service times should be on the front page easily found.
 - Your 4Gs motto/tennants are buried in the page and difficult to find.
 - There are some pages that lead to empty information.
+- It's very difficult to navigate on mobile.
 
 ---
 
@@ -163,7 +166,7 @@ title: Emmanuel Baptist Church
 ---
 
 | Features             | Option 1        | Option 2                     |
-| -------------------- |:---------------:| -----------------------------|
+| :------------------: |:---------------:| :---------------------------:|
 | Custom Site          |                 |               x              |
 | Upload own Pages     |                 |               x              |
 | Clean up dead links  |       x         |               x              |
@@ -178,7 +181,10 @@ title: Emmanuel Baptist Church
 
 ---
 
-### Get back to me with a yes/no if you would like further information or if you would like to learn more about my thoughts on what can help your congregation succeed.
+#### NEXT STEPS
+
+- Get back to me if you would like further information.
+- I'm always available for more recommendations.
 
 ---
 
