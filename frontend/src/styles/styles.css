@@ -43,6 +43,7 @@ html, body {
   max-width: inherit !important;
   width: 100% !important;
   margin: 1rem !important;
+  padding: 0rem 0 !important;
 }
 
 .spectacle-content h1 {
@@ -78,6 +79,10 @@ html, body {
   font-size: .8rem;
 }
 
+.spectacle-content img {
+  max-width: 75%;
+}
+
 @media (min-width: 576px) {
   .spectacle-content {
     margin: 0 16% !important;
@@ -92,13 +97,13 @@ html, body {
 
 @media (min-width: 992px) {
   .spectacle-content {
-    margin: 0 16% !important;
+    margin: 0 20% !important;
   }
 }
 
 @media (min-width: 1200px) {
   .spectacle-content {
-    margin: 0 16% !important;
+    margin: 0 20% !important;
   }
 }
 
