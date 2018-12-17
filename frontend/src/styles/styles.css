@@ -48,6 +48,7 @@ html, body {
 
 .spectacle-deck {
   overflow-x: hidden;
+  touch-action: none;
 }
 
 .spectacle-content h1 {
