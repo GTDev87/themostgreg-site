@@ -23,11 +23,20 @@ let introAreaClass = [%bs.raw
 
 let heroAreaClass = [%bs.raw
   {| css(tw`
-    /* this is remaning space*/
     flex-1
-    `)
-  |}
+    relative
+  `)|}
 ];
+
+let heroAreaInnerClass = [%bs.raw
+{| css(tw`
+  pin-t
+  pin-l
+  absolute
+  w-full
+  h-full
+`)|}
+]; /* NOTE this is how you handle safari issue */
 
 let menuAreaClass = [%bs.raw {| css(tw`
   flex-no-grow
@@ -72,7 +81,7 @@ let make = (~props: PagePropType.props, _children) => {
         }
       }>
       <div className=introAreaClass>
-        <div className=heroAreaClass> <Intro /> </div>
+        <div className=heroAreaClass><div className=heroAreaInnerClass><Intro /></div></div>
         <div className=menuAreaClass> <Menu /> </div>
       </div>
       <About />
