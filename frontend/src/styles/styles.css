@@ -46,6 +46,10 @@ html, body {
   padding: 0rem 0 !important;
 }
 
+.spectacle-deck {
+  overflow-x: hidden;
+}
+
 .spectacle-content h1 {
   font-size: 1.5rem;
 }
