@@ -39,7 +39,68 @@ html, body {
 }
 
 .spectacle-content {
-  transform: scale(0.6228571428571429) !important;
+  transform: scale(1) !important;
+  max-width: inherit !important;
+  width: 100% !important;
+  margin: 1rem !important;
 }
+
+.spectacle-content h1 {
+  font-size: 1.5rem;
+}
+
+.spectacle-content h2 {
+  font-size: 1.4rem;
+}
+
+.spectacle-content h3 {
+  font-size: 1.3rem;
+}
+
+.spectacle-content h4 {
+  font-size: 1.2rem;
+}
+
+.spectacle-content p {
+  font-size: 1rem;
+  color: white;
+}
+
+.spectacle-content li {
+  font-size: 1rem;
+}
+
+.spectacle-content tr {
+  font-size: 1rem;
+}
+
+.spectacle-content td {
+  font-size: .8rem;
+}
+
+@media (min-width: 576px) {
+  .spectacle-content {
+    margin: 0 16% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .spectacle-content {
+    margin: 0 16% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .spectacle-content {
+    margin: 0 16% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .spectacle-content {
+    margin: 0 16% !important;
+  }
+}
+
 
 /* purgecss end ignore */
