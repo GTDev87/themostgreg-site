@@ -57,11 +57,7 @@ openssl req -x509 -nodes -days 1 -newkey rsa:2048 -keyout /tmp/tls.key -out /tmp
 kubectl create secret tls tmg-secret --key /tmp/tls.key --cert /tmp/tls.crt
 
 # setup https cert-manager
-helm install --name cert-manager \
-    --namespace ingress \
-    --set ingressShim.defaultIssuerName=letsencrypt-prod \
-    --set ingressShim.defaultIssuerKind=ClusterIssuer \
-    stable/cert-manager
+helm install --name cert-manager --namespace ingress --set ingressShim.defaultIssuerName=letsencrypt-prod --set ingressShim.defaultIssuerKind=ClusterIssuer stable/cert-manager
 
 # create cluster issuer
 kubectl create -n ingress -f clusterissuers.yaml
@@ -69,6 +65,16 @@ kubectl create -n ingress -f clusterissuers.yaml
 make clean
 kompose up
 
+```
+
+# Point Digital ocean server to worker
+
+point Type A www.themostgreg.com to worker ip address
+
+
+# To See absolutely everything
+```
+kubectl get all,ingress,pvc,pv,issuer,clusterissuer,certificate --all-namespaces
 ```
 
 
