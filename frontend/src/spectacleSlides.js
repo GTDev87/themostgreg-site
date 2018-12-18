@@ -5,8 +5,8 @@ export default class SpectacleSlides extends React.Component {
   render() {
     return (
       <WithSpectacle
-        render={({ Deck, MarkdownSlides }) =>
-          <Deck theme={this.props.theme}>
+        render={({ Deck, MarkdownSlides, theme }) =>
+          <Deck theme={theme}>
             {MarkdownSlides(this.props.markdown).slice(1)}
           </Deck>
         }

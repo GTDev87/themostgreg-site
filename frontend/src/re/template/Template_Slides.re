@@ -14,12 +14,11 @@ let defaultComponents = MDXRenderer.defaultComponents;
 let make = (~props: PagePropType.props, _children) => {
   ...component,
   render: _self => {
-    let theme = SpectacleThemeNova.createTheme();
-
+    
     /* Note skips first page for metadata */
     /* TODO use mdx rendering when gatsby-mdx uses mdx-deck */
     <div>
-      <SpectacleSlides theme markdown=props##data##page##rawBody />
+      <SpectacleSlides markdown=props##data##page##rawBody />
     </div>
   }
 };

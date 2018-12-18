@@ -16,8 +16,10 @@ export default class WithSpectacle extends React.Component {
   }
   componentDidMount() {
     const spectacle = require("spectacle");
+    const createTheme = require("spectacle-theme-nova/bundle").default;
+    let theme = createTheme();
 
-    this.setState(spectacleExports.reduce(setTo(spectacle), {}));
+    this.setState(spectacleExports.reduce(setTo(spectacle), {theme}));
   }
   render() {
     if (!isReady(this.state)) return null;
