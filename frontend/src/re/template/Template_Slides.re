@@ -8,7 +8,9 @@ let component = ReasonReact.statelessComponent("Template_Slides");
 let css = Css.css;
 let tw = Css.tw;
 
-let defaultComponents = MDXRenderer.defaultComponents;
+/* TODO: NOTE the mdx renderer may have some problems transpiling */
+/* let defaultComponents = MDXRenderer.defaultComponents; */
+
 /* let spectacleSlidesClass = [%bs.raw {| css("") |}]; */
 
 let make = (~props: PagePropType.props, _children) => {

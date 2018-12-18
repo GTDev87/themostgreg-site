@@ -8,7 +8,7 @@ let component = ReasonReact.statelessComponent("Template_Proposal");
 let css = Css.css;
 let tw = Css.tw;
 
-let defaultComponents = MDXRenderer.defaultComponents;
+/* let defaultComponents = MDXRenderer.defaultComponents; */
 let layoutClass = [%bs.raw {| css(tw`my-0 text-xl leading-tight bg-blue`) |}];
 
 let make = (~props: PagePropType.props, _children) => {

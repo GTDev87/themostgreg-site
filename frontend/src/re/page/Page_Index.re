@@ -36,8 +36,10 @@ let heroAreaInnerClass = [%bs.raw
   w-full
   h-full
 `)|}
-]; /* NOTE this is how you handle safari issue */
-
+];
+/* NOTE this is how you handle safari issue */
+/* https://stackoverflow.com/a/33644245/923636 */
+/* https://bugs.webkit.org/show_bug.cgi?id=137730 */
 let menuAreaClass = [%bs.raw {| css(tw`
   flex-no-grow
 `) |}];

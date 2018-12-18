@@ -1,4 +1,6 @@
-[@bs.module "gatsby-mdx/mdx-renderer"]
+/* TODO Test this in SAFARI!!! */
+
+/* [@bs.module "gatsby-mdx/mdx-renderer"]
 external comp: ReasonReact.reactClass = "default";
 
 [@bs.deriving jsConverter]
@@ -7,15 +9,15 @@ type components = {
   h2: option(ReasonReact.reactClass),
   h3: option(ReasonReact.reactClass),
   p: option(ReasonReact.reactClass),
-};
+}; */
 /* functions componentsToJs and componentsFromJs */
-
+/* 
 let defaultComponents = {
   h1: None,
   h2: None,
   h3: None,
   p: None,
-};
+}; */
 
 /* h1,
   h2,
@@ -36,7 +38,7 @@ let defaultComponents = {
   table */
 
 
-
+/* 
 let make = (~components=?, children) => {
   ReasonReact.wrapJsForReason(
     ~reactClass=comp,
@@ -48,4 +50,4 @@ let make = (~components=?, children) => {
     },
     children,
   );
-};
+}; */
