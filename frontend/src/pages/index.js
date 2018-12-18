@@ -7,7 +7,7 @@ export default (props) => <Index props={props} />;
 
 export const query = graphql`
   query {
-    projects: allMdx(filter: {fields: {source: {eq: "projects"}, slug: {ne: null}}}) {
+    projects: allMdx(filter: {frontmatter: {featured:{eq: true}}, fields: {source: {eq: "projects"}, slug: {ne: null}}}) {
       edges {
         node {
           id

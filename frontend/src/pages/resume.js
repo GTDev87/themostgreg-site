@@ -9,7 +9,7 @@ export default (props) => isBrowser ? <Page props={props} /> : <div />;
 
 export const query = graphql`
   query {
-    projects: allMdx(filter: {fields: {source: {eq: "projects"}, slug: {ne: null}}}) {
+    projects: allMdx(filter: {frontmatter: {resume: {eq: true}}, fields: {source: {eq: "projects"}, slug: {ne: null}}}) {
       edges {
         node {
           id
