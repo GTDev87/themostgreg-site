@@ -15,6 +15,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^0.16.6",
     "@mdx-js/tag": "^0.16.6",
+    "@react-pdf/renderer": "^1.0.0",
     "@react-website-themes/default": "^0.0.17",
     "browserslist": "^4.3.4",
     "emotion": "^9.2.9",
@@ -92,6 +93,9 @@
   "browserslist": [
     "last 1 version",
     "> 1%",
-    "not dead"
+    "not dead",
+    "safari >= 7",
+    "chrome >= 58",
+    "ie >= 10"
   ]
 }
