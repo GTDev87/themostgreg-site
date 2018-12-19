@@ -39,7 +39,7 @@ let make = _children => {
         <CircleInfo
           size=LG
           label="Who is Greg?"
-          copy="Freelancer, Developer, Coach, Consultant, Climber, Traceur, Dog Lover.  I have a passion and borderline obession with optimizing process."
+          copy=Helper_Me.about
           comp={<div className={jpgClass ++ " bg-greg-image"} />}
         />
         <a href="#contact" className=buttonClass >

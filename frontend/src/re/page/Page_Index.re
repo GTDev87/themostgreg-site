@@ -62,11 +62,7 @@ let make = (~props: PagePropType.props, _children) => {
     | SelectProject(pid) => ReasonReact.Update({projectModal: pid})
     },
   render: self => {
-    let projects =
-      props##data##projects##edges
-      |> Belt.List.fromArray
-      |> Belt.List.keep(_, proj => proj##node##fields##slug !== "/__draft/")
-      |> Belt.List.toArray;
+    let projects = props##data##projects##edges;
     <Modal
       modalSelect={self.state.projectModal}
       closeFn={() => self.send(SelectProject(None)) |> ignore}

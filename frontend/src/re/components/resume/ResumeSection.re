@@ -1,0 +1,58 @@
+let component = ReasonReact.statelessComponent("ResumeSection");
+
+let sectionStyle =
+  ReactPdfStyleSheet.createStyleSheet(
+    ~width="100%",
+    ~paddingLeft="4%",
+    ~paddingRight="4%",
+    (),
+  );
+let sectionInnerWrapperStyle =
+ReactPdfStyleSheet.createStyleSheet(
+  ~display="flex",
+  ~flexDirection="row",
+  ~justifyContent="flex-between",
+  ~borderBottomWidth="1",
+  ~borderBottomColor="lightgrey",
+  ~paddingTop="2%",
+  ~paddingBottom="2%",
+  (),
+);
+
+let titleWrapperStyle =
+  ReactPdfStyleSheet.createStyleSheet(
+    ~height="100%",
+    ~width="20%",
+    (),
+  );
+
+let titleTextStyle =
+  ReactPdfStyleSheet.createStyleSheet(
+    ~fontSize="12",
+    ~fontWeight="800",
+    ~color="gold",
+    (),
+  );
+let contactSectionWrapperStyle =
+ReactPdfStyleSheet.createStyleSheet(
+  ~height="100%",
+  ~width="80%",
+  ~paddingRight="5%",
+  (),
+);
+
+let make = (~title, children) => {
+  ...component,
+  render: _self => {
+    <ReactPdfView style=sectionStyle>
+      <ReactPdfView style=sectionInnerWrapperStyle>
+        <ReactPdfView style=titleWrapperStyle>
+          <ReactPdfText style=titleTextStyle>{ReasonReact.string(title)}</ReactPdfText>
+        </ReactPdfView>
+        <ReactPdfView style=contactSectionWrapperStyle>
+          {children}
+        </ReactPdfView>
+      </ReactPdfView>
+    </ReactPdfView>
+  }
+};

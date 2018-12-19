@@ -1,11 +1,11 @@
 [@bs.module "@react-pdf/renderer"]
-external comp: ReasonReact.reactClass = "View";
+external comp: ReasonReact.reactClass = "Image";
 
-/* Note: these do not take className */
-let make = (~style: option(ReactPdfStyleSheet.styleSheet)=?, children) =>
+let make = (~src: string, ~style: option(ReactPdfStyleSheet.styleSheet)=?, children) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=comp,
     ~props={
+      "src": src,
       "style":
         style |> Js.Nullable.fromOption,
     },

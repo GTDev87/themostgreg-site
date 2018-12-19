@@ -13,28 +13,13 @@ let viwerClassName = [%bs.raw
   `) |}
 ];
 
-let sectionStyle =
-  ReactDOMRe.Style.make(
-    ~backgroundColor="green",
-    (),
-  );
-
 let component = ReasonReact.statelessComponent("Page_Resume");
 
 let make = (~props: PagePropType.props, _children) => {
   ...component,
   render: self => {
     <ReactPdfViewer className=viwerClassName>
-      <ReactPdfDocument>
-        <ReactPdfPage size=("A4")>
-          <ReactPdfView style=sectionStyle>
-            <ReactPdfText>{ReasonReact.string("Section #1")}</ReactPdfText>
-          </ReactPdfView>
-          <ReactPdfView style=sectionStyle>
-            <ReactPdfText>{ReasonReact.string("Section #2")}</ReactPdfText>
-          </ReactPdfView>
-        </ReactPdfPage>
-      </ReactPdfDocument>
+      <Resume props/>
     </ReactPdfViewer>
   }
 };

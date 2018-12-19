@@ -5,11 +5,11 @@ const base = {
 
 const config = {
   /* meta tags */
-  siteTitle: `${base.name} - a series of GatsbyJS starters`,
+  siteTitle: `${base.name}`,
   siteTitlePostfix: ` - ${base.name}`,
   siteDescription: `${
     base.name
-    } is a series starters: Minimal, Equipped, Themed, Website, Blog.`,
+    }`,
   siteImage: 'preview.jpg',
   siteLanguage: 'en',
 

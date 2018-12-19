@@ -5,7 +5,9 @@ import Page from '../../lib/es6_global/src/re/page/Page_Resume.bs.js';
 
 let isBrowser = typeof window !== 'undefined';
 
-export default (props) => isBrowser ? <Page props={props} /> : <div />;
+let renderPage = (props) => <Page props={props} />;
+
+export default (props) => isBrowser ? renderPage(props) : <div />;
 
 export const query = graphql`
   query {
