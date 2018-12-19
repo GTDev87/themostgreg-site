@@ -3,9 +3,12 @@ type imageType = {. "publicURL": string};
 type frontmatterType = {
   .
   "title": string,
+  "startTime": string,
+  "endTime": string,
   "categories": array(string),
   "cover": imageType,
   "images": array(imageType),
+  "jobType": array(string),
 };
 
 type fieldType = {
@@ -42,6 +45,8 @@ type nodeType = {
   .
   "id": string,
   "html": string,
+  "rawBody": string,
+  "exceprt": string,
   "categories": array(string),
   "excerpt": string,
   "frontmatter": frontmatterType,

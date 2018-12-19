@@ -16,12 +16,16 @@ export const query = graphql`
         node {
           id
           html
-          excerpt(pruneLength: 250)
+          rawBody
+          excerpt(pruneLength: 100000)
           fields {
             slug
             prefix
           }
           frontmatter {
+            jobType
+            startTime
+            endTime
             title
             categories
             cover{

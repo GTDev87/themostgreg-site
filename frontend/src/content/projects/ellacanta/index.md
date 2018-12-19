@@ -6,6 +6,8 @@ images: ["ellacanta.jpg"]
 jobType: ["contract"]
 featured: true
 resume: true
+startTime: "August 2018"
+endTime: "Current"
 ---
 
 Consultant Web developer at [Ella Canta](https://www.ellacanta.com/).  Creating AB Test for user behavior.  Implementing CSS and javascript interactions for a resonsive website.

@@ -19,7 +19,7 @@ let resumeStyle =
 
 let headerSectionStyle =
   ReactPdfStyleSheet.createStyleSheet(
-    ~height="10%",
+    ~height="100",
     ~width="100%",
     ~borderBottomWidth="2",
     ~borderColor="gold",
@@ -28,16 +28,29 @@ let headerSectionStyle =
 
 let contentSectionStyle =
   ReactPdfStyleSheet.createStyleSheet(
-    ~height="90%",
+    /* ~height="90%", */
     ~width="100%",
     (),
   );
 
+let hasJobType = (projects, jobTypeName) =>
+  projects##edges
+  |> Belt.List.fromArray
+  |> Belt.List.keep(_, edge => {
+      (
+        edge##node##frontmatter##jobType
+        |> Belt.List.fromArray
+        |> Belt.List.keep(_, (jobType) => jobType == jobTypeName)
+        |> Belt.List.length
+   ) > 0
+  })
+  |> Belt.List.map(_, edge => edge##node);
+
 let make = (~props: PagePropType.props, _children) => {
   ...component,
   render: _self => {
-    let projects = props##data##projects##edges;
-
+    let works = hasJobType(props##data##projects, "job");
+    let contractWorks = hasJobType(props##data##projects, "contract");
     <ReactPdfDocument>
       <ReactPdfPage size="A4">
         <ReactPdfView style=resumeStyle>
@@ -46,16 +59,19 @@ let make = (~props: PagePropType.props, _children) => {
           </ReactPdfView>
           <ReactPdfView style=contentSectionStyle>
             <ResumeSection title="Personal Profile">
-              <ReactPdfText>{ReasonReact.string(Helper_Me.about)}</ReactPdfText>
+              <ReactPdfText key="profile">{ReasonReact.string(Helper_Me.resumeAbout)}</ReactPdfText>
             </ResumeSection>
             <ResumeSection title="Work Experience">
-              <ReactPdfText>{ReasonReact.string("Content")}</ReactPdfText>
+              <ResumeWorkExperience key="work" works=works />
+            </ResumeSection>
+            <ResumeSection title="Contract Work">
+              <ResumeWorkExperience key="contracts" works=contractWorks />
             </ResumeSection>
             <ResumeSection title="Key Skills">
-              <ReactPdfText>{ReasonReact.string("Content")}</ReactPdfText>
+              <ReactPdfText key="key skills">{ReasonReact.string("Content")}</ReactPdfText>
             </ResumeSection>
             <ResumeSection title="Education">
-              <ReactPdfText>{ReasonReact.string("Content")}</ReactPdfText>
+              <ReactPdfText key="education">{ReasonReact.string("Content")}</ReactPdfText>
             </ResumeSection>
           </ReactPdfView>
           /* {

@@ -7,15 +7,10 @@ let headerStyle =
     ~justifyContent="flex-between",
     ~height="100%",
     ~width="100%",
-    ~paddingTop="3%",
-    ~paddingBottom="3%",
-    ~paddingLeft="4%",
-    ~paddingRight="4%",
-    (),
-  );
-
-let nameSectionWrapperStyle =
-  ReactPdfStyleSheet.createStyleSheet(
+    ~paddingTop="15",
+    ~paddingBottom="15",
+    ~paddingLeft="20",
+    ~paddingRight="20",
     (),
   );
 
@@ -36,7 +31,7 @@ let titleTextStyle =
 let contactTextStyle =
   ReactPdfStyleSheet.createStyleSheet(
     ~fontSize="8",
-    ~marginBottom="3%",
+    ~marginBottom="5",
     (),
   );
 
@@ -79,7 +74,7 @@ let make = (_children) => {
         <ReactPdfView style=imageWrapperStyle>
           <ReactPdfImage style=imageStyle src=Helper_Me.gregImageCircle />
         </ReactPdfView>
-        <ReactPdfView style=nameSectionWrapperStyle>
+        <ReactPdfView>
           <ReactPdfText style=nameTextStyle>{ReasonReact.string(Helper_Me.name)}</ReactPdfText>
           <ReactPdfText style=titleTextStyle>{ReasonReact.string("Developer/Consultant")}</ReactPdfText>
         </ReactPdfView>

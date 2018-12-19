@@ -10,6 +10,8 @@ in inches
 mm millimeters
 cm centimeters
 % percentage
+
+If things start to crash, use less % because render is taxed with dynamic rendering.
 */
 
 /* fontSize uses a number no px */
