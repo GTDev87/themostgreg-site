@@ -3,10 +3,12 @@ let component = ReasonReact.statelessComponent("Resume");
 let css = Css.css;
 let tw = Css.tw;
 
-let aboutClass = [%bs.raw {| css(tw`
-  px-16
-`)
-|}];
+let resumePageStyle =
+  ReactPdfStyleSheet.createStyleSheet(
+    ~padding="30",
+    (),
+  );
+
 
 let resumeStyle =
   ReactPdfStyleSheet.createStyleSheet(
@@ -57,7 +59,7 @@ let make = (~props: PagePropType.props, _children) => {
       |> Belt.List.map(_, (work) => Belt.List.fromArray(work##frontmatter##categories))
       |> Belt.List.flatten;
     <ReactPdfDocument>
-      <ReactPdfPage size="A4">
+      <ReactPdfPage size="A4" style=resumePageStyle>
         <ReactPdfView style=resumeStyle>
           <ReactPdfView style=headerSectionStyle>
             <ResumeHeader/>

@@ -6,54 +6,39 @@ title: Emmanuel Baptist Church
 
 ![Google](https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Emmanuel_Baptist_SE_sun_jeh.jpg/1200px-Emmanuel_Baptist_SE_sun_jeh.jpg)
 
----
-
-### Proposal for website services
-
+Proposal for website services
 ---
 
 ## WHY HAVE A WEBSITE?
 
 ---
 
-#### Websites are your face to your online audience.
+### Websites are your face to your online audience.
 
 ![unsplash.com](https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
 
 ---
 
-#### Websites
+### Websites are your face to your online audience.
 
-- Are vehicles for people to show what you do
-- Give people knowledge for how to interact with your services
-- Simple sites seamlessly give you your information.
-- Complex sites take people time and can frustrate them into leaving.
+- They show people what you do.
+- Give people knowledge of how to interact with your services
+- Shows your message 
+- Communicates what you offer
 
 ---
 
-#### It is in your best interest to have a site which
-
-- shows your message 
-- communicates what you offer
-  - clearly
-  - concisely
-  - quickly. 
+### Why for EBC?
+![lisaltzman.com](http://www.lisaltzman.com/wp-content/uploads/2011/06/LSA-P-EmBaptist-mainpic-071511.jpg)
 
 ---
 
 ### Why for EBC?
 
-#### A strong site:
-
-- Would show what you are offing your community
+- Would show what you are offering your community
 - It will show people your values.
 - Allow your members to support you and each other.
 - Give you the ability to upload content on your blogs quickly.
-
----
-
-#### It could:
-
 - Show your value to your congregation by engaging them.
 - Direct them important functions and events.
 - Evangelize through important works you have done.
@@ -65,13 +50,13 @@ title: Emmanuel Baptist Church
 
 ---
 
-#### I have looked over your website
+### I have looked over your website
 
 ![unsplash.com](https://images.unsplash.com/photo-1516382799247-87df95d790b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80)
 
 ---
 
-#### I have found (pros): 
+### I have looked over your website (pros)
 
 - it is a very interactive website
 - it is strongly designed full of bright colors
@@ -79,7 +64,7 @@ title: Emmanuel Baptist Church
 
 ---
 
-#### I have found (cons):
+### I have looked over your website (cons):
 
 - Still it is hard to find meaningful information about services.
 - Service times should be on the front page easily found.
@@ -89,7 +74,9 @@ title: Emmanuel Baptist Church
 
 ---
 
-#### I recommend: 
+### I have looked over your website
+
+I Recommend
 
 - a cleaner interface for website and especially mobile
 - removal of dead links or pages that have no information
@@ -139,8 +126,6 @@ title: Emmanuel Baptist Church
 - This requires just managing the Wordpress content and keeping it up to date.  
 - Also cleaning up pastor's blog.
 - Also adding Google analytics to see how the congregation uses the site to see which pages are useful and which pages need help.    
-  
-  
   
 With this option I can do work on the the current architecture but it will be more work (if even possible) to change interactions on the site.
 

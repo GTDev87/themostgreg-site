@@ -42,8 +42,18 @@ html, body {
   transform: scale(1) !important;
   max-width: inherit !important;
   width: 100% !important;
+  height: 100% !important;
   margin: 1rem !important;
   padding: 0rem 0 !important;
+}
+
+.spectacle-content > div {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding: 4rem 0;
 }
 
 .spectacle-deck {
@@ -63,6 +73,18 @@ html, body {
   font-size: 1.3rem;
 }
 
+.spectacle-content > * > *:only-child {
+  margin-bottom: inherit;
+}
+
+.spectacle-content > * > *:not(:only-child):last-child {
+  margin-bottom: auto;
+}
+
+.spectacle-content > * > *:not(:only-child):not(:last-child) {
+  margin-bottom: 1rem;
+}
+
 .spectacle-content h4 {
   font-size: 1.2rem;
 }
@@ -70,6 +92,12 @@ html, body {
 .spectacle-content p {
   font-size: 1rem;
   color: white;
+  text-align: left;
+}
+
+.spectacle-content img {
+  max-height: 75%;
+  object-fit: contain;
 }
 
 .spectacle-content li {
@@ -82,10 +110,6 @@ html, body {
 
 .spectacle-content td {
   font-size: .8rem;
-}
-
-.spectacle-content img {
-  max-width: 75%;
 }
 
 @media (min-width: 576px) {
