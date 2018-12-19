@@ -11,7 +11,18 @@ export default (props) => isBrowser ? renderPage(props) : <div />;
 
 export const query = graphql`
   query {
-    projects: allMdx(filter: {frontmatter: {resume: {eq: true}}, fields: {source: {eq: "projects"}, slug: {ne: null}}}) {
+    projects: allMdx(
+      filter: {
+        frontmatter: {
+          resume: {eq: true}
+        },
+        fields: {
+          source: {eq: "projects"},
+          slug: {ne: null}
+        }
+      }
+      sort: { order: DESC, fields: [frontmatter___endDate] }
+    ) {
       edges {
         node {
           id
@@ -24,8 +35,10 @@ export const query = graphql`
           }
           frontmatter {
             jobType
+            role
             startTime
             endTime
+            endDate
             title
             categories
             cover{

@@ -1,7 +1,7 @@
 let component = ReasonReact.statelessComponent("ResumeWorkExperience");
 
 let resumeWorkProjectStyle = ReactPdfStyleSheet.createStyleSheet(
-  ~marginBottom="10",
+  ~marginBottom="12",
   (),
 );
 

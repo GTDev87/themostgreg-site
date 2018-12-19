@@ -5,7 +5,6 @@ let headerStyle =
     ~display="flex",
     ~flexDirection="row",
     ~justifyContent="flex-between",
-    ~height="100%",
     ~width="100%",
     ~paddingTop="15",
     ~paddingBottom="15",
@@ -42,14 +41,13 @@ let imageStyle =
   );
 
 let contactSectionWrapperStyle = ReactPdfStyleSheet.createStyleSheet(
-  ~height="100%",
   ~width="20%",
   (),
 );
 
 let imageWrapperStyle =
   ReactPdfStyleSheet.createStyleSheet(
-    ~marginRight="5%",
+    ~marginRight="30",
     ~display="flex",
     ~justifyContent="center",
     ~alignItems="center",
@@ -58,7 +56,6 @@ let imageWrapperStyle =
 
 let titleWrapperStyle =
   ReactPdfStyleSheet.createStyleSheet(
-    ~height="100%",
     ~width="80%",
     ~display="flex",
     ~flexDirection="row",

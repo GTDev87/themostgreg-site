@@ -10,7 +10,6 @@ let aboutClass = [%bs.raw {| css(tw`
 
 let resumeStyle =
   ReactPdfStyleSheet.createStyleSheet(
-    ~height="100%",
     ~width="100%",
     ~fontSize="10",
     ~color="grey",
@@ -28,7 +27,6 @@ let headerSectionStyle =
 
 let contentSectionStyle =
   ReactPdfStyleSheet.createStyleSheet(
-    /* ~height="90%", */
     ~width="100%",
     (),
   );
@@ -51,6 +49,13 @@ let make = (~props: PagePropType.props, _children) => {
   render: _self => {
     let works = hasJobType(props##data##projects, "job");
     let contractWorks = hasJobType(props##data##projects, "contract");
+    let educations = hasJobType(props##data##projects, "education");
+    let volunteerWorks = hasJobType(props##data##projects, "volunteer");
+
+    let categories =
+      (works @ contractWorks @ educations @ volunteerWorks)
+      |> Belt.List.map(_, (work) => Belt.List.fromArray(work##frontmatter##categories))
+      |> Belt.List.flatten;
     <ReactPdfDocument>
       <ReactPdfPage size="A4">
         <ReactPdfView style=resumeStyle>
@@ -67,27 +72,16 @@ let make = (~props: PagePropType.props, _children) => {
             <ResumeSection title="Contract Work">
               <ResumeWorkExperience key="contracts" works=contractWorks />
             </ResumeSection>
-            <ResumeSection title="Key Skills">
-              <ReactPdfText key="key skills">{ReasonReact.string("Content")}</ReactPdfText>
-            </ResumeSection>
             <ResumeSection title="Education">
-              <ReactPdfText key="education">{ReasonReact.string("Content")}</ReactPdfText>
+              <ResumeWorkExperience key="education" works=educations />
+            </ResumeSection>
+            <ResumeSection title="Volunteering">
+              <ResumeWorkExperience key="volunteer" works=volunteerWorks />
+            </ResumeSection>
+            <ResumeSection title="Skills">
+              <ResumeSkills key="skills" skills=categories />
             </ResumeSection>
           </ReactPdfView>
-          /* {
-            projects
-            |> Belt.List.fromArray
-            |> Belt.List.map(_, (edge) => {
-                <ReactPdfView key=edge##node##id style=sectionStyle>
-                  <ReactPdfText>
-                    {ReasonReact.string(edge##node##frontmatter##title)}
-                  </ReactPdfText>
-                </ReactPdfView>
-              })
-            |> Belt.List.toArray
-            |> ReasonReact.array
-          } */
-          
         </ReactPdfView>
       </ReactPdfPage>
     </ReactPdfDocument>;

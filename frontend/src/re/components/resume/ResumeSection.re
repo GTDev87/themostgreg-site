@@ -3,7 +3,6 @@ let component = ReasonReact.statelessComponent("ResumeSection");
 let sectionStyle =
   ReactPdfStyleSheet.createStyleSheet(
     ~width="100%",
-    
     ~paddingLeft="20",
     ~paddingRight="20",
     (),
@@ -16,13 +15,12 @@ ReactPdfStyleSheet.createStyleSheet(
   ~borderBottomWidth="1",
   ~borderBottomColor="lightgrey",
   ~paddingTop="15",
-  ~paddingBottom="15",
+  ~paddingBottom="10",
   (),
 );
 
 let titleWrapperStyle =
   ReactPdfStyleSheet.createStyleSheet(
-    ~height="100%",
     ~width="20%",
     (),
   );
@@ -36,7 +34,6 @@ let titleTextStyle =
   );
 let contactSectionWrapperStyle =
 ReactPdfStyleSheet.createStyleSheet(
-  ~height="100%",
   ~width="80%",
   ~paddingRight="30",
   (),

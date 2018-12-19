@@ -5,6 +5,7 @@ type frontmatterType = {
   "title": string,
   "startTime": string,
   "endTime": string,
+  "role": string,
   "categories": array(string),
   "cover": imageType,
   "images": array(imageType),
