@@ -126,7 +126,7 @@ I Recommend
 
 ---
 
-#### From what I've seen I see two possibilities where I can help the Emmanuel Baptist Church:
+#### From what I've seen I see two possibilities where I can help the EBC.
 
 ---
 
