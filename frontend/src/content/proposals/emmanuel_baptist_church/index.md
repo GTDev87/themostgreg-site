@@ -36,7 +36,17 @@ Proposal for website services
 ### Why for EBC?
 
 - Would show what you are offering your community
+
+---
+
+### Why for EBC?
+
 - It will show people your values.
+
+---
+
+### Why for EBC?
+
 - Allow your members to support you and each other.
 - Give you the ability to upload content on your blogs quickly.
 - Show your value to your congregation by engaging them.
@@ -126,7 +136,11 @@ I Recommend
 - This requires just managing the Wordpress content and keeping it up to date.  
 - Also cleaning up pastor's blog.
 - Also adding Google analytics to see how the congregation uses the site to see which pages are useful and which pages need help.    
-  
+
+---
+
+#### Option 1: I can clean up your existing Wordpress site which involves:
+
 With this option I can do work on the the current architecture but it will be more work (if even possible) to change interactions on the site.
 
 ---
@@ -143,7 +157,7 @@ With this option I can do work on the the current architecture but it will be mo
 
 ---
 
-#### Comparison between option 1 and 2
+#### Option 1 vs Option 2
 
 - Option 1 will be quicker in the short term
 - Option 2 will only cost more up front and will cost only a maintenance fee afterwards.  
