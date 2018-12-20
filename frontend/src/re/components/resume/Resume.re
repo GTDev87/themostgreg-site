@@ -63,7 +63,6 @@ let make = (~props: PagePropType.props, _children) => {
       |> Belt.HashSet.String.toArray
       |> Belt.List.fromArray;
       
-
     <ReactPdfDocument>
       <ReactPdfPage size="A4" style=resumePageStyle>
         <ReactPdfView style=resumeStyle>

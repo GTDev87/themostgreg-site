@@ -26,6 +26,10 @@ export const pageQuery = graphql`
       frontmatter {
         title
         categories
+        images{
+          base
+          publicURL
+        }
       }
     }
     footerLinks: mdx(

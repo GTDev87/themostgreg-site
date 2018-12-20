@@ -1,4 +1,8 @@
-type imageType = {. "publicURL": string};
+type imageType = {
+  .
+  "base": string,
+  "publicURL": string,
+};
 
 type frontmatterType = {
   .

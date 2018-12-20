@@ -16,11 +16,19 @@ let tw = Css.tw;
 let make = (~props: PagePropType.props, _children) => {
   ...component,
   render: _self => {
-    
+    let rawbodyWithImages = 
+      props##data##page##frontmatter##images
+      |> Belt.List.fromArray
+      |> Belt.List.reduce(_, props##data##page##rawBody, (memoBody, image) => {
+        image##base
+        |> Js.Re.fromStringWithFlags(_, "g")
+        |> Js.String.replaceByRe(_, image##publicURL, memoBody);
+      });
+    /* images need to be in the images list */
     /* Note skips first page for metadata */
     /* TODO use mdx rendering when gatsby-mdx uses mdx-deck */
     <div>
-      <SpectacleSlides markdown=props##data##page##rawBody />
+      <SpectacleSlides markdown=rawbodyWithImages />
     </div>
   }
 };

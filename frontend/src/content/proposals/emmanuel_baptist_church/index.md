@@ -1,12 +1,13 @@
 ---
 title: Emmanuel Baptist Church
+images: ["site_interactive.png", "service_times.png", "no_info.png", "mobile_confusing.png"]
 ---
 
 # Emmanuel Baptist Church
-
 ![Google](https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Emmanuel_Baptist_SE_sun_jeh.jpg/1200px-Emmanuel_Baptist_SE_sun_jeh.jpg)
 
-Proposal for website services
+#### Proposal for website services
+
 ---
 
 ## WHY HAVE A WEBSITE?
@@ -23,7 +24,7 @@ Proposal for website services
 
 - They show people what you do.
 - They give people knowledge of how to interact with your services.
-- They shows your message.
+- They show your message.
 - They communicate what you offer.
 
 ---
@@ -33,26 +34,35 @@ Proposal for website services
 
 ---
 
-### Why for EBC?
+#### Would show what you are offering your community
 
-- Would show what you are offering your community
-
----
-
-### Why for EBC?
-
-- It will show people your values.
+![vox-cdn.com](https://cdn.vox-cdn.com/uploads/chorus_image/image/62328345/Curbed_Brooklyn_1405.0.jpg)
 
 ---
 
-### Why for EBC?
+#### Allow your members to support you and each other.
 
-- Allow your members to support you and each other.
-- Give you the ability to upload content on your blogs quickly.
-- Show your value to your congregation by engaging them.
-- Direct them important functions and events.
-- Evangelize through important works you have done.
-- Get your message out to your members.
+![vox-cdn.com](https://cdn-az.allevents.in/banners/600ea6742f9250066424e90abde2c953-rimg-w1275-h825-gmir.jpg)
+
+---
+
+#### Show when your services and events are.
+
+![www.ebcconnects.com](http://www.ebcconnects.com/wp-content/uploads/2018/11/LoveExchangeChristmasEve-Web-500x500.jpg)
+
+---
+
+#### Show people how they can support you
+
+![http://nhchurches.org](http://nhchurches.org/wp-content/uploads/2017/12/donate-button.jpg)
+
+---
+
+#### Evangelize through important works you have done.
+
+- south africa event
+
+![http://www.ebcconnects.com](http://www.ebcconnects.com/wp-content/uploads/2018/10/igsouthafrica.jpg)
 
 ---
 
@@ -72,26 +82,34 @@ Proposal for website services
 - it is strongly designed full of bright colors
 - displays current events readily on the home page
 
+![png](site_interactive.png)
+
 ---
 
 ### I have looked over your website (cons):
 
-- Still it is hard to find meaningful information about services.
-- Service times should be on the front page easily found.
-- Your 4Gs motto/tenants are buried in the page and difficult to find.
-- There are some pages that lead to empty information.
-- It's very difficult to navigate on mobile.
+#### Still it is hard to find meaningful information about services.
+
+![png](service_times.png)
+- Not on the front page
+- What does alternate mean?
+- This week?
 
 ---
 
-### I have looked over your website
+### I have looked over your website (cons):
 
-I Recommend
+#### There are some pages that lead to empty information.
 
-- a cleaner interface for website and especially mobile
-- removal of dead links or pages that have no information
-- A quicker one page interface that displays relevant service times and church projects.
-- Analytics to see how many users donate, who is on the site and when and just to track which pages the members use.
+![png](no_info.png)
+
+---
+
+### I have looked over your website (cons):
+
+#### It's very difficult to navigate on mobile.
+
+![png](mobile_confusing.png)
 
 ---
 
@@ -99,38 +117,30 @@ I Recommend
 
 ---
 
-#### I want your site to have a clean single page that displays all important information about services quickly.
+#### I want the site to be simple and clean
 
 ![unsplash.com](https://as1.ftcdn.net/jpg/00/69/02/14/500_F_69021405_4N6x5rfqo85wlky09HyaeAm9xDr5aklV.jpg)
 
 ---
 
-#### It will
+I Recommend
 
-- direct the congregation to upcoming events and projects happening.
-- display the churches motto/beliefs on the front page in a quick an concise manner.
-- easily show the blog of the pastoral staff.
-
----
-
-#### I recommend: 
-
-- Removing dead links on the site.  And pages that have no information.
-- Having an easier to understand calendar about upcoming events and services.
-- A blog where pastors can upload their content themselves.  
-- Adding Google analytics to see which pages are used.
+- A simpler interface for website (especially on mobile mobile).
+- removal of dead links (don't bring you to another page) or pages that have no information.
+- A front page that displays relevant service times and church projects.
+- Analytics to see how many users donate, who is on the site and when and just to track which pages the members use.
 
 ---
 
-## STEPS
+## STEPS OPTIONS
 
 ---
 
-#### From what I've seen I see two possibilities where I can help the EBC.
+### From what I've seen I see two possibilities where I can help the EBC.
 
 ---
 
-#### Option 1: I can clean up your existing Wordpress site which involves:
+### Option 1: I can clean up your existing Wordpress site which involves:
 
 - removing dead links
 - This requires just managing the Wordpress content and keeping it up to date.  
@@ -139,13 +149,13 @@ I Recommend
 
 ---
 
-#### Option 1: I can clean up your existing Wordpress site which involves:
+### Option 1: I can clean up your existing Wordpress site which involves:
 
 With this option I can do work on the the current architecture but it will be more work (if even possible) to change interactions on the site.
 
 ---
 
-#### Option 2: I can redo of the website.
+### Option 2: I can redo of the website.
 
 - With this option, I will work with your designer redo the site in your image.
 - I will still give you a panel to upload content via Wordpress or netlify.
@@ -153,11 +163,7 @@ With this option I can do work on the the current architecture but it will be mo
 
 ---
 
-## BUDGET
-
----
-
-#### Option 1 vs Option 2
+### Option 1 vs Option 2
 
 - Option 1 will be quicker in the short term
 - Option 2 will only cost more up front and will cost only a maintenance fee afterwards.  
@@ -180,7 +186,7 @@ With this option I can do work on the the current architecture but it will be mo
 
 ---
 
-#### NEXT STEPS
+### NEXT STEPS
 
 - Get back to me if you would like further information.
 - I'm always available for more recommendations.
@@ -191,7 +197,7 @@ With this option I can do work on the the current architecture but it will be mo
 
 ---
 
-#### ABOUT ME
+### ABOUT ME
 
 - I am a developer with 7 years of experience in frontend, backend, website developer, machine learning.
 - I've worked everywhere from small companies (Mashwork 12 people) medium sized companies and large companies (Microsoft).
