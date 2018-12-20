@@ -22,9 +22,9 @@ Proposal for website services
 ### Websites are your face to your online audience.
 
 - They show people what you do.
-- Give people knowledge of how to interact with your services
-- Shows your message 
-- Communicates what you offer
+- They give people knowledge of how to interact with your services.
+- They shows your message.
+- They communicate what you offer.
 
 ---
 

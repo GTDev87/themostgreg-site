@@ -57,7 +57,13 @@ let make = (~props: PagePropType.props, _children) => {
     let categories =
       (works @ contractWorks @ educations @ volunteerWorks)
       |> Belt.List.map(_, (work) => Belt.List.fromArray(work##frontmatter##categories))
-      |> Belt.List.flatten;
+      |> Belt.List.flatten
+      |> Belt.List.toArray
+      |> Belt.HashSet.String.fromArray
+      |> Belt.HashSet.String.toArray
+      |> Belt.List.fromArray;
+      
+
     <ReactPdfDocument>
       <ReactPdfPage size="A4" style=resumePageStyle>
         <ReactPdfView style=resumeStyle>
