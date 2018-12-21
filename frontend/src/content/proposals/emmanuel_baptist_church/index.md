@@ -1,6 +1,6 @@
 ---
 title: Emmanuel Baptist Church
-images: ["site_interactive.png", "service_times.png", "no_info.png", "mobile_confusing.png"]
+images: ["site_interactive.png", "service_times.png", "no_info.png", "mobile_confusing.png", "netlify_control.png"]
 ---
 
 # Emmanuel Baptist Church
@@ -34,33 +34,25 @@ images: ["site_interactive.png", "service_times.png", "no_info.png", "mobile_con
 
 ---
 
-#### Would show what you are offering your community
+#### Websites show what you are offering your community
 
 ![vox-cdn.com](https://cdn.vox-cdn.com/uploads/chorus_image/image/62328345/Curbed_Brooklyn_1405.0.jpg)
 
 ---
 
-#### Allow your members to support you and each other.
+#### They show your services and  events.
 
 ![vox-cdn.com](https://cdn-az.allevents.in/banners/600ea6742f9250066424e90abde2c953-rimg-w1275-h825-gmir.jpg)
 
 ---
 
-#### Show when your services and events are.
-
-![www.ebcconnects.com](http://www.ebcconnects.com/wp-content/uploads/2018/11/LoveExchangeChristmasEve-Web-500x500.jpg)
-
----
-
-#### Show people how they can support you
+#### Show people how they can support you /donate to you.
 
 ![http://nhchurches.org](http://nhchurches.org/wp-content/uploads/2017/12/donate-button.jpg)
 
 ---
 
 #### Evangelize through important works you have done.
-
-- south africa event
 
 ![http://www.ebcconnects.com](http://www.ebcconnects.com/wp-content/uploads/2018/10/igsouthafrica.jpg)
 
@@ -70,13 +62,13 @@ images: ["site_interactive.png", "service_times.png", "no_info.png", "mobile_con
 
 ---
 
-### I have looked over your website
+### After looking over your website
 
 ![unsplash.com](https://images.unsplash.com/photo-1516382799247-87df95d790b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80)
 
 ---
 
-### I have looked over your website (pros)
+### After looking over your website (pros)
 
 - it is a very interactive website
 - it is strongly designed full of bright colors
@@ -85,8 +77,6 @@ images: ["site_interactive.png", "service_times.png", "no_info.png", "mobile_con
 ![png](site_interactive.png)
 
 ---
-
-### I have looked over your website (cons):
 
 #### Still it is hard to find meaningful information about services.
 
@@ -97,15 +87,12 @@ images: ["site_interactive.png", "service_times.png", "no_info.png", "mobile_con
 
 ---
 
-### I have looked over your website (cons):
-
 #### There are some pages that lead to empty information.
 
 ![png](no_info.png)
+... still waiting
 
 ---
-
-### I have looked over your website (cons):
 
 #### It's very difficult to navigate on mobile.
 
@@ -117,13 +104,13 @@ images: ["site_interactive.png", "service_times.png", "no_info.png", "mobile_con
 
 ---
 
-#### I want the site to be simple and clean
+### Your site should be simple to use
 
 ![unsplash.com](https://as1.ftcdn.net/jpg/00/69/02/14/500_F_69021405_4N6x5rfqo85wlky09HyaeAm9xDr5aklV.jpg)
 
 ---
 
-I Recommend
+#### Recommendations
 
 - A simpler interface for website (especially on mobile mobile).
 - removal of dead links (don't bring you to another page) or pages that have no information.
@@ -136,11 +123,11 @@ I Recommend
 
 ---
 
-### From what I've seen I see two possibilities where I can help the EBC.
+### Two possibilities to support EBC.
 
 ---
 
-### Option 1: I can clean up your existing Wordpress site which involves:
+### Option 1: Cleaning up existing Wordpress site which involves:
 
 - removing dead links
 - This requires just managing the Wordpress content and keeping it up to date.  
@@ -149,17 +136,39 @@ I Recommend
 
 ---
 
-### Option 1: I can clean up your existing Wordpress site which involves:
+#### Option 1: Cost/Benefit
 
-With this option I can do work on the the current architecture but it will be more work (if even possible) to change interactions on the site.
+With this option the work will be using the current architecture but it will be more work (if even possible) to change the flow of the site.
 
 ---
 
-### Option 2: I can redo of the website.
+### Option 2: Rebuild the website.
 
-- With this option, I will work with your designer redo the site in your image.
-- I will still give you a panel to upload content via Wordpress or netlify.
-- I will help with any issues with user flow and organization of data.
+- With this option, work will be done with your designer to rebuild the site however you want.
+- There will be a panel to upload content via Wordpress or Netlify.
+- Assistance will be given with any issues concerning user flow and organization of data/content.
+
+---
+
+#### Option 2: Rebuild mobile experience
+
+- The moble experience will also be cleaned up on the site so it is simpler to use.
+- Easy navigation to service times.
+- Easy to use menu.
+
+---
+
+#### Option 2: Event Upload Control panel.
+
+- You will be given access to a event uploading for so you can upload events yourself.
+- You just need to upload the event to a control panel and it will be consistent in the entire site.
+- Will update the calendars and update links to the events.
+
+---
+
+#### You will not need to contact anyone to update events on the site.  It can be done all in-house!
+
+![png](netlify_control.png)
 
 ---
 
@@ -175,10 +184,10 @@ With this option I can do work on the the current architecture but it will be mo
 | Custom Site          |                 |               x              |
 | Upload own Pages     |                 |               x              |
 | Clean up dead links  |       x         |               x              |
-| Analytics            |       x         |               x              |
-| Consistent Site Data |   When Noticed  |      Always and Automatic    |
+| Google Analytics     |       x         |               x              |
 | Mobile Experience    | Same as current |      Responsive and Clean    |
 | Upload Events        |                 | Upload and pages will update |
+| Consistent Site Data |   When Noticed  |    Always and Automatically  |
 
 ---
 
@@ -193,19 +202,19 @@ With this option I can do work on the the current architecture but it will be mo
 
 ---
 
-## ABOUT ME
+## ABOUT GREG
 
 ---
 
-### ABOUT ME
+### ABOUT GREG
 
-- I am a developer with 7 years of experience in frontend, backend, website developer, machine learning.
-- I've worked everywhere from small companies (Mashwork 12 people) medium sized companies and large companies (Microsoft).
-- I've seen how people interact in organization and how to make things run cleanly.
-- I come with a lot of energy and I'm excited to see my clients succeed.
+- A developer with 7 years of experience in frontend, backend, website developer and machine learning.
+- Worked everywhere from small companies (Mashwork 12 people) medium sized companies and large companies (Microsoft).
+- Able to help people work well together in organizations and make things run cleanly.
+- Always has a lot of energy and is always excited to see his clients succeed!
 
 ---
 
 ## Thanks!
 
-#### Thank you very much for your time.  Get back to me soon!
+#### Thank you very much for your time.  Contact me soon!
