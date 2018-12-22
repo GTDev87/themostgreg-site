@@ -1,6 +1,6 @@
 ---
 title: Emmanuel Baptist Church
-images: ["site_interactive.png", "service_times.png", "no_info.png", "mobile_confusing.png", "netlify_control.png"]
+images: ["site_interactive.png", "service_times.png", "no_info.png", "mobile_confusing.png", "netlify_control.png", "magnifying_glass.jpeg", "no_menu.png", "ohhh_menu.png"]
 ---
 
 # Emmanuel Baptist Church
@@ -64,7 +64,7 @@ images: ["site_interactive.png", "service_times.png", "no_info.png", "mobile_con
 
 ### After looking over your website
 
-![unsplash.com](https://images.unsplash.com/photo-1516382799247-87df95d790b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80)
+![jpeg](magnifying_glass.jpeg)
 
 ---
 
@@ -82,8 +82,22 @@ images: ["site_interactive.png", "service_times.png", "no_info.png", "mobile_con
 
 ![png](service_times.png)
 - Not on the front page
-- What does alternate mean?
-- This week?
+- What is the Alternative?
+- Do you mean Alternate?  Alternate weeks?
+
+---
+
+#### Some best practices aren't being followed.
+
+![png](no_menu.png)
+Where's the menu?
+
+---
+
+#### Some best practices aren't being followed (cont).
+
+![png](ohhh_menu.png)
+Ohhh there's the menu!
 
 ---
 
